@@ -1,0 +1,176 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Global default-deny safety net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function isValidEmailId(id) {
+      return id is string && id.size() >= 3 && id.size() <= 254
+        && id.matches('^[a-z0-9._%+\\-]+@[a-z0-9.\\-]+\\.[a-z]{2,}$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerified() {
+      return isSignedIn()
+        && request.auth.token.email_verified == true
+        && request.auth.token.email is string;
+    }
+
+    function callerEmail() {
+      return request.auth.token.email.lower();
+    }
+
+    function isBootstrappedAdmin() {
+      return isVerified() && (
+        callerEmail() == 'nhungcam1902@gmail.com' ||
+        callerEmail() == 'hr@careertoday.com.vn'
+      );
+    }
+
+    function isAdmin() {
+      return isVerified() && (
+        isBootstrappedAdmin() ||
+        exists(/databases/$(database)/documents/admins/$(callerEmail()))
+      );
+    }
+
+    function isValidOptionalString(data, field, maxLen) {
+      return !(field in data) || (data[field] is string && data[field].size() <= maxLen);
+    }
+
+    function isValidJob(data) {
+      return data.keys().hasAll([
+          'id', 'title', 'industry', 'level', 'location',
+          'salary', 'hot', 'posted', 'desc', 'authorId', 'createdAt'
+        ])
+        && data.keys().hasOnly([
+          'id', 'title', 'titleEn', 'industry', 'level', 'location',
+          'salary', 'salaryEn', 'hot', 'posted', 'postedEn', 'desc', 'descEn',
+          'authorId', 'createdAt'
+        ])
+        && data.id is number
+        && data.title is string && data.title.size() >= 1 && data.title.size() <= 200
+        && isValidOptionalString(data, 'titleEn', 200)
+        && data.industry is string && data.industry.size() >= 1 && data.industry.size() <= 100
+        && data.level is string && data.level.size() >= 1 && data.level.size() <= 100
+        && data.location is string && data.location.size() >= 1 && data.location.size() <= 100
+        && data.salary is string && data.salary.size() >= 1 && data.salary.size() <= 150
+        && isValidOptionalString(data, 'salaryEn', 150)
+        && data.hot is bool
+        && data.posted is string && data.posted.size() >= 1 && data.posted.size() <= 60
+        && isValidOptionalString(data, 'postedEn', 60)
+        && data.desc is string && data.desc.size() >= 1 && data.desc.size() <= 5000
+        && isValidOptionalString(data, 'descEn', 5000)
+        && data.authorId is string && data.authorId.size() >= 1 && data.authorId.size() <= 128
+        && data.authorId.matches('^[a-zA-Z0-9_\\-]+$')
+        && data.authorId == request.auth.uid
+        && data.createdAt is timestamp;
+    }
+
+    function isValidNewsArticle(data) {
+      return data.keys().hasAll([
+          'id', 'category', 'date', 'title', 'img',
+          'summary', 'content', 'authorId', 'createdAt'
+        ])
+        && data.keys().hasOnly([
+          'id', 'category', 'date', 'title', 'titleEn',
+          'metaTitle', 'metaDescription', 'metaKeywords', 'img',
+          'summary', 'summaryEn', 'content', 'contentEn', 'authorId', 'createdAt'
+        ])
+        && data.id is number
+        && data.category is string && data.category.size() >= 1 && data.category.size() <= 100
+        && data.date is string && data.date.size() >= 1 && data.date.size() <= 40
+        && data.title is string && data.title.size() >= 1 && data.title.size() <= 200
+        && isValidOptionalString(data, 'titleEn', 200)
+        && isValidOptionalString(data, 'metaTitle', 200)
+        && isValidOptionalString(data, 'metaDescription', 500)
+        && isValidOptionalString(data, 'metaKeywords', 500)
+        && data.img is string && data.img.size() >= 1 && data.img.size() <= 250000
+        && data.summary is string && data.summary.size() >= 1 && data.summary.size() <= 1000
+        && isValidOptionalString(data, 'summaryEn', 1000)
+        && data.content is string && data.content.size() >= 1 && data.content.size() <= 400000
+        && isValidOptionalString(data, 'contentEn', 400000)
+        && data.authorId is string && data.authorId.size() >= 1 && data.authorId.size() <= 128
+        && data.authorId.matches('^[a-zA-Z0-9_\\-]+$')
+        && data.authorId == request.auth.uid
+        && data.createdAt is timestamp;
+    }
+
+    function isValidAdminUser(data) {
+      return data.keys().hasAll(['email', 'role', 'addedBy', 'addedByEmail', 'createdAt'])
+        && data.keys().hasOnly(['email', 'role', 'addedBy', 'addedByEmail', 'createdAt'])
+        && isValidEmailId(data.email)
+        && data.role is string && data.role == 'admin'
+        && data.addedBy is string && data.addedBy.size() >= 1 && data.addedBy.size() <= 128
+        && data.addedBy.matches('^[a-zA-Z0-9_\\-]+$')
+        && data.addedBy == request.auth.uid
+        && data.addedByEmail is string && data.addedByEmail.size() >= 3 && data.addedByEmail.size() <= 254
+        && data.addedByEmail == callerEmail()
+        && data.createdAt is timestamp;
+    }
+
+    // Public Job Portal: Anyone can view/list; ONLY verified admin can write/delete
+    match /jobs/{jobId} {
+      allow get: if isValidId(jobId);
+      allow list: if true;
+      allow create: if isAdmin() && isValidId(jobId) && isValidJob(incoming())
+        && incoming().createdAt == request.time;
+      allow update: if isAdmin() && isValidId(jobId) && isValidJob(incoming())
+        && incoming().createdAt == existing().createdAt
+        && incoming().authorId == existing().authorId
+        && incoming().diff(existing()).affectedKeys().hasOnly([
+          'title', 'titleEn', 'industry', 'level', 'location',
+          'salary', 'salaryEn', 'hot', 'posted', 'postedEn', 'desc', 'descEn'
+        ]);
+      allow delete: if isAdmin() && isValidId(jobId);
+    }
+
+    // Public Blog Portal: Anyone can view/list; ONLY verified admin can write/delete
+    match /news/{newsId} {
+      allow get: if isValidId(newsId);
+      allow list: if true;
+      allow create: if isAdmin() && isValidId(newsId) && isValidNewsArticle(incoming())
+        && incoming().createdAt == request.time;
+      allow update: if isAdmin() && isValidId(newsId) && isValidNewsArticle(incoming())
+        && incoming().createdAt == existing().createdAt
+        && incoming().authorId == existing().authorId
+        && incoming().diff(existing()).affectedKeys().hasOnly([
+          'category', 'date', 'title', 'titleEn',
+          'metaTitle', 'metaDescription', 'metaKeywords', 'img',
+          'summary', 'summaryEn', 'content', 'contentEn'
+        ]);
+      allow delete: if isAdmin() && isValidId(newsId);
+    }
+
+    // Admin allowlist (PII isolated; verified admins can read list, add new admins, and remove non-root admins)
+    match /admins/{adminId} {
+      allow get: if isVerified() && isValidEmailId(adminId) && (callerEmail() == adminId || isAdmin());
+      allow list: if isAdmin();
+      allow create: if isAdmin() && isValidEmailId(adminId) && isValidAdminUser(incoming())
+        && incoming().email == adminId
+        && incoming().createdAt == request.time;
+      allow update: if false;
+      allow delete: if isAdmin() && isValidEmailId(adminId)
+        && adminId != 'nhungcam1902@gmail.com'
+        && adminId != 'hr@careertoday.com.vn'
+        && adminId != callerEmail();
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "entities": {
+    "Job": {
+      "title": "Job",
+      "description": "A job opening published by a CareerToday administrator.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "description": "Numeric timestamp identifier used for ordering and UI referencing."
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "Primary job title (Vietnamese)."
+        },
+        "titleEn": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Optional English job title."
+        },
+        "industry": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Industry classification key."
+        },
+        "level": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Seniority level classification key."
+        },
+        "location": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Work location key."
+        },
+        "salary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 150,
+          "description": "Compensation range text."
+        },
+        "salaryEn": {
+          "type": "string",
+          "maxLength": 150,
+          "description": "Optional English compensation text."
+        },
+        "hot": {
+          "type": "boolean",
+          "description": "Whether the position is urgent or featured."
+        },
+        "posted": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60,
+          "description": "Display label for posting time."
+        },
+        "postedEn": {
+          "type": "string",
+          "maxLength": 60,
+          "description": "Optional English display label for posting time."
+        },
+        "desc": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 5000,
+          "description": "Full job description and requirements."
+        },
+        "descEn": {
+          "type": "string",
+          "maxLength": 5000,
+          "description": "Optional English job description."
+        },
+        "authorId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Firebase Auth UID of the administrator who created the posting."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp recorded upon creation."
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "industry",
+        "level",
+        "location",
+        "salary",
+        "hot",
+        "posted",
+        "desc",
+        "authorId",
+        "createdAt"
+      ]
+    },
+    "NewsArticle": {
+      "title": "NewsArticle",
+      "description": "A blog article published by a CareerToday administrator.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "description": "Numeric timestamp identifier used for ordering and UI referencing."
+        },
+        "category": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100,
+          "description": "Blog category key."
+        },
+        "date": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40,
+          "description": "Display publication date string."
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "Article title."
+        },
+        "titleEn": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Optional English article title."
+        },
+        "metaTitle": {
+          "type": "string",
+          "maxLength": 200,
+          "description": "Optional SEO Meta Title."
+        },
+        "metaDescription": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Optional SEO Meta Description."
+        },
+        "metaKeywords": {
+          "type": "string",
+          "maxLength": 500,
+          "description": "Optional SEO Meta Keywords."
+        },
+        "img": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 250000,
+          "description": "Cover image URL, asset path, or compressed Data URL."
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000,
+          "description": "Short summary excerpt."
+        },
+        "summaryEn": {
+          "type": "string",
+          "maxLength": 1000,
+          "description": "Optional English summary excerpt."
+        },
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400000,
+          "description": "Full article rich content HTML or text."
+        },
+        "contentEn": {
+          "type": "string",
+          "maxLength": 400000,
+          "description": "Optional English article body text."
+        },
+        "authorId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Firebase Auth UID of the administrator who created the article."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp recorded upon creation."
+        }
+      },
+      "required": [
+        "id",
+        "category",
+        "date",
+        "title",
+        "img",
+        "summary",
+        "content",
+        "authorId",
+        "createdAt"
+      ]
+    },
+    "AdminUser": {
+      "title": "AdminUser",
+      "description": "Authorized CareerToday administrator record keyed by lowercase email.",
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 254,
+          "pattern": "^[a-z0-9._%+\\-]+@[a-z0-9.\\-]+\\.[a-z]{2,}$",
+          "description": "Lowercase administrator email address."
+        },
+        "role": {
+          "type": "string",
+          "enum": ["admin"],
+          "description": "Fixed admin role."
+        },
+        "addedBy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Firebase Auth UID of the administrator who granted access."
+        },
+        "addedByEmail": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 254,
+          "description": "Lowercase email of the administrator who granted access."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Server timestamp recorded upon granting admin access."
+        }
+      },
+      "required": ["email", "role", "addedBy", "addedByEmail", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/jobs/{jobId}": {
+      "schema": { "$ref": "#/entities/Job" },
+      "description": "Publicly readable job postings managed strictly by verified admins."
+    },
+    "/news/{newsId}": {
+      "schema": { "$ref": "#/entities/NewsArticle" },
+      "description": "Publicly readable blog articles managed strictly by verified admins."
+    },
+    "/admins/{adminId}": {
+      "schema": { "$ref": "#/entities/AdminUser" },
+      "description": "Co-admin allowlist keyed by lowercase email, readable and managed only by verified admins."
+    }
+  }
+}

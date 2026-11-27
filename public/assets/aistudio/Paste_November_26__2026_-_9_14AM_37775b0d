@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerToday Group | Be your hand, by your side</title>
+    <meta name="description" content="CareerToday – Công ty TNHH CareerToday (CAREERTODAY COMPANY LIMITED). Tư vấn tuyển dụng nhân sự cấp cao (Headhunting / ESS).">
+    
+    <!-- Google Fonts: Montserrat & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#D71920',
+                        brandRedDark: '#B31218',
+                        brandBlue: '#007DB7',
+                        brandBlueDark: '#005F8C',
+                        brandLight: '#F8FAFC',
+                        brandGrey: '#F5F5F5',
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 30px -5px rgba(0, 125, 183, 0.08)',
+                        'card': '0 4px 20px -2px rgba(15, 23, 42, 0.05)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #1E293B;
+            background-color: #FFFFFF;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .bg-subtle-grid {
+            background-image: radial-gradient(rgba(0, 125, 183, 0.1) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.9); opacity: 0.75; }
+            100% { transform: scale(1.55); opacity: 0; }
+        }
+        .pulse-ring::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background-color: inherit;
+            z-index: -1;
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: #F1F5F9; }
+        ::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+    </style>
+</head>
+<body class="antialiased selection:bg-brandBlue selection:text-white">
+
+    <!-- ==================== TOP BAR ==================== -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2 hidden md:block border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <a href="https://www.google.com/maps?q=10.77828,106.701912" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-white transition">
+                    <i class="fa-solid fa-location-dot text-brandRed"></i>
+                    <span data-i18n="top_address">Tầng 17, Tòa nhà Vincom Center, 72 Lê Thánh Tôn, P. Sài Gòn, TP.HCM</span>
+                </a>
+                <a href="mailto:anna.le@careertoday.com.vn" class="flex items-center gap-2 hover:text-white transition">
+                    <i class="fa-solid fa-envelope text-brandBlue"></i>
+                    <span>anna.le@careertoday.com.vn</span>
+                </a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:+84877699759" class="font-bold text-white hover:text-brandRed transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-brandRed"></i>
+                    <span>+84 877 699 759</span>
+                </a>
+                <span class="text-slate-600">|</span>
+                <div class="flex items-center space-x-3">
+                    <a href="https://www.facebook.com/CareerTodayVn?locale=vi_VN" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-[#1877F2] transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/career-today/home/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="hover:text-[#0A66C2] transition">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@careertodayy" target="_blank" rel="noopener noreferrer" aria-label="TikTok" class="hover:text-white transition">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== STICKY HEADER & NAVIGATION ==================== -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200/80 shadow-2xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- EXACT CAREERTODAY HORIZONTAL LOGO -->
+                <a href="#home" class="flex items-center focus:outline-none py-1 shrink-0" aria-label="CareerToday Group">
+                    <svg class="h-12 sm:h-14 w-auto" viewBox="0 0 430 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <!-- Exact Geometric Symbol matching image_baf974.png -->
+                            <g id="ct-exact-mark">
+                                <!-- 1. Outer Crescent C (left to bottom-right) -->
+                                <path d="
+                                    M 34 11
+                                    A 67 67 0 0 0 116 123
+                                    L 111 116
+                                    A 59 59 0 0 1 40 18
+                                    Z
+                                "/>
+                                <!-- 2. Inner Crescent C (top-right peak over top, down left, around bottom to right) -->
+                                <path d="
+                                    M 119 36
+                                    A 49 49 0 1 0 104 106
+                                    L 99 100
+                                    A 41.5 41.5 0 1 1 112 42
+                                    Z
+                                "/>
+                                <!-- 3. Upper-right arc cap connecting inner C top-right peak to right hand -->
+                                <path d="
+                                    M 119 36
+                                    L 112 42
+                                    L 106 36
+                                    L 113 30
+                                    Z
+                                "/>
+                                <!-- 4. Upper Body + Both Arms + Left Stepping Leg (Left arm starts from outer C top-left peak (34,11), crosses inner C into torso; Left leg curves smoothly onto inner C bottom arc) -->
+                                <path d="
+                                    M 34 11
+                                    L 40 18
+                                    C 54 34 65 49 77 56
+                                    C 91 50 101 39 111 29
+                                    L 118 35
+                                    C 103 52 93 65 91.5 76
+                                    C 88.5 89 72 103 44 107
+                                    L 41 100
+                                    C 61 97 72 86 71 73
+                                    C 70 61 60 47 45 28
+                                    C 40 21 36 16 34 11
+                                    Z
+                                "/>
+                                <!-- 5. Right Extending Leg (separated by crisp white gap from left leg, extending straight across inner C to outer C bottom-right peak (116,123)) -->
+                                <path d="
+                                    M 91.5 81
+                                    C 94 92 103 105 116 123
+                                    L 107 123
+                                    C 97 109 89 98 83 90
+                                    C 86.5 87 89.5 84 91.5 81
+                                    Z
+                                "/>
+                                <!-- 6. Red Head -->
+                                <circle cx="79.5" cy="43" r="10.2"/>
+                            </g>
+
+                            <!-- Exact Wordmark & Tagline -->
+                            <g id="ct-exact-wordmark">
+                                <text x="140" y="64" font-family="Montserrat, sans-serif" font-weight="800" font-size="46" letter-spacing="1.2">CAREER</text>
+                                <text x="142" y="101" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="31.5" letter-spacing="15.8">TODAY</text>
+                                <rect x="142" y="110" width="265" height="1.1"/>
+                                <text x="142" y="125" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="16.8" letter-spacing="0.45">Be your hand, by your side</text>
+                                <rect x="142" y="131.5" width="265" height="1.1"/>
+                            </g>
+                        </defs>
+
+                        <!-- Monogram Render -->
+                        <g fill="#00669E">
+                            <path d="M 34 11 A 67 67 0 0 0 116 123 L 111 116 A 59 59 0 0 1 40 18 Z"/>
+                            <path d="M 119 36 A 49 49 0 1 0 104 106 L 99 100 A 41.5 41.5 0 1 1 112 42 Z"/>
+                            <path d="M 34 11 L 40 18 C 54 34 65 49 77 56 C 91 50 101 39 111 29 L 118 35 C 103 52 93 65 91.5 76 C 88.5 89 72 103 44 107 L 41 100 C 61 97 72 86 71 73 C 70 61 60 47 45 28 C 40 21 36 16 34 11 Z"/>
+                            <path d="M 91.5 81 C 94 92 103 105 116 123 L 107 123 C 97 109 89 98 83 90 C 86.5 87 89.5 84 91.5 81 Z"/>
+                        </g>
+
+                        <!-- Red Head -->
+                        <circle cx="79.5" cy="43" r="10.2" fill="#E30613"/>
+
+                        <!-- White Tie Cutout -->
+                        <polygon points="77.8,56.5 81.2,56.5 80.6,59.5 82,69.5 79.5,73 77,69.5 78.4,59.5" fill="#FFFFFF"/>
+
+                        <!-- Wordmark & Slogan Render -->
+                        <text x="140" y="64" font-family="Montserrat, sans-serif" font-weight="800" font-size="46" letter-spacing="1.2" fill="#E30613">CAREER</text>
+                        <text x="142" y="101" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="31.5" letter-spacing="15.8" fill="#00669E">TODAY</text>
+                        <line x1="142" y1="110" x2="407" y2="110" stroke="#E30613" stroke-width="1.1"/>
+                        <text x="142" y="125" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="16.8" letter-spacing="0.45" fill="#E30613">Be your hand, by your side</text>
+                        <line x1="142" y1="131.5" x2="407" y2="131.5" stroke="#E30613" stroke-width="1.1"/>
+                    </svg>
+                </a>
+
+                <!-- DESKTOP MENU -->
+                <nav class="hidden xl:flex items-center space-x-6 text-[14px] font-bold text-slate-700">
+                    <a href="#home" class="hover:text-brandBlue transition py-2" data-i18n="nav_home">Trang chủ</a>
+                    <a href="#about" class="hover:text-brandBlue transition py-2" data-i18n="nav_about">Giới thiệu</a>
+                    <a href="#services" class="hover:text-brandBlue transition py-2" data-i18n="nav_services">Dịch vụ</a>
+                    <a href="#jobs" class="hover:text-brandRed transition py-2 flex items-center gap-1.5">
+                        <span data-i18n="nav_jobs">Việc làm</span>
+                        <span id="nav-job-count" class="bg-brandRed text-white text-[10px] px-1.5 py-0.5 rounded-full">6</span>
+                    </a>
+                    <a href="#news" class="hover:text-brandBlue transition py-2" data-i18n="nav_news">Tin tức & Sự kiện</a>
+                    <a href="#contact" class="hover:text-brandBlue transition py-2" data-i18n="nav_contact">Liên hệ</a>
+                </nav>
+
+                <!-- UTILITY CONTROLS -->
+                <div class="flex items-center space-x-2 sm:space-x-3">
+                    <!-- Global Search Trigger -->
+                    <button onclick="openSearchModal()" class="p-2.5 rounded-xl bg-brandGrey hover:bg-blue-50 text-slate-700 hover:text-brandBlue transition" aria-label="Search" title="Tìm kiếm / Search">
+                        <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                    </button>
+
+                    <!-- Language Switcher VI | EN -->
+                    <div class="flex items-center bg-brandGrey p-1 rounded-full border border-gray-200">
+                        <button id="btn-vi" onclick="switchLang('vi')" class="px-2.5 py-1 rounded-full text-xs font-extrabold bg-brandBlue text-white shadow-xs transition">VI</button>
+                        <button id="btn-en" onclick="switchLang('en')" class="px-2.5 py-1 rounded-full text-xs font-extrabold text-slate-600 hover:text-brandBlue transition">EN</button>
+                    </div>
+
+                    <!-- CTA Button: Job Order -->
+                    <a href="#job-order-form" class="hidden sm:inline-flex items-center gap-2 bg-brandRed hover:bg-brandRedDark text-white text-xs font-extrabold px-4 py-2.5 rounded-xl shadow-sm transition">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <span data-i18n="nav_cta">Gửi yêu cầu tuyển dụng</span>
+                    </a>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button onclick="toggleMobileMenu()" class="xl:hidden p-2.5 rounded-xl text-slate-700 hover:bg-gray-100" aria-label="Menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-gray-100 px-4 pt-3 pb-5 space-y-1.5 shadow-xl">
+            <a href="#home" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-slate-700 hover:bg-blue-50 hover:text-brandBlue" data-i18n="nav_home">Trang chủ</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-slate-700 hover:bg-blue-50 hover:text-brandBlue" data-i18n="nav_about">Giới thiệu</a>
+            <a href="#services" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-slate-700 hover:bg-blue-50 hover:text-brandBlue" data-i18n="nav_services">Dịch vụ</a>
+            <a href="#jobs" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-brandRed bg-red-50/70" data-i18n="nav_jobs">Việc làm</a>
+            <a href="#news" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-slate-700 hover:bg-blue-50 hover:text-brandBlue" data-i18n="nav_news">Tin tức & Sự kiện</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block px-4 py-2.5 rounded-xl font-bold text-slate-700 hover:bg-blue-50 hover:text-brandBlue" data-i18n="nav_contact">Liên hệ</a>
+            <div class="pt-2">
+                <a href="#job-order-form" onclick="toggleMobileMenu()" class="block text-center bg-brandRed text-white font-bold py-3 rounded-xl shadow-sm" data-i18n="nav_cta">Gửi yêu cầu tuyển dụng</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section id="home" class="relative bg-gradient-to-br from-white via-slate-50/70 to-blue-50/60 pt-12 pb-16 lg:pt-20 lg:pb-24 bg-subtle-grid overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <!-- Left Column -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-white border border-blue-100 px-4 py-1.5 rounded-full shadow-xs">
+                        <span class="w-2 h-2 rounded-full bg-brandRed"></span>
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-brandBlue">CAREERTODAY COMPANY LIMITED</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-slate-900 leading-tight">
+                        <span class="text-brandBlue">CareerToday Group</span><br>
+                        <span class="text-xl sm:text-2xl lg:text-3xl font-bold text-slate-700 block mt-1" data-i18n="company_full">
+                            Công ty TNHH CareerToday
+                        </span>
+                    </h1>
+
+                    <div class="inline-block bg-red-50 border-l-4 border-brandRed px-4 py-2.5 rounded-r-xl">
+                        <p class="text-base sm:text-lg font-extrabold text-brandRed">
+                            “Be your hand, by your side” <span class="font-medium text-slate-700 text-sm sm:text-base" data-i18n="slogan_sub">(Luôn đồng hành bên bạn)</span>
+                        </p>
+                    </div>
+
+                    <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl" data-i18n="hero_sub">
+                        Tư vấn tuyển dụng nhân sự cấp cao (Headhunting / ESS) chuyên nghiệp với kho dữ liệu hơn 70.000 ứng viên đa ngành nghề.
+                    </p>
+
+                    <!-- Dual CTAs -->
+                    <div class="flex flex-wrap gap-3.5 pt-1">
+                        <a href="#jobs" class="inline-flex items-center gap-2 bg-brandRed hover:bg-brandRedDark text-white font-bold px-6 py-3.5 rounded-xl shadow-sm transition text-sm">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span data-i18n="hero_cta_jobs">Tìm việc làm ngay</span>
+                        </a>
+                        <a href="#job-order-form" class="inline-flex items-center gap-2 bg-brandBlue hover:bg-brandBlueDark text-white font-bold px-6 py-3.5 rounded-xl shadow-sm transition text-sm">
+                            <i class="fa-solid fa-building-user"></i>
+                            <span data-i18n="hero_cta_order">Gửi yêu cầu tuyển dụng</span>
+                        </a>
+                    </div>
+
+                    <!-- Key Highlights Bar -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3">
+                        <div class="bg-white p-4 rounded-2xl border border-gray-200/80 shadow-xs">
+                            <div class="text-2xl font-extrabold text-brandRed font-heading">&gt;70.000</div>
+                            <div class="text-xs font-semibold text-slate-600 mt-0.5" data-i18n="stat_1">Hồ sơ ứng viên</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl border border-gray-200/80 shadow-xs">
+                            <div class="text-2xl font-extrabold text-brandBlue font-heading">ESS</div>
+                            <div class="text-xs font-semibold text-slate-600 mt-0.5" data-i18n="stat_2">Executive Search Service</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl border border-gray-200/80 shadow-xs">
+                            <div class="text-2xl font-extrabold text-slate-900 font-heading">30+</div>
+                            <div class="text-xs font-semibold text-slate-600 mt-0.5" data-i18n="stat_3">Đối tác của 30+ Tập đoàn hàng đầu</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column Visual -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white rounded-3xl p-4 sm:p-5 shadow-soft border border-gray-200/80 space-y-4">
+                        <div class="relative rounded-2xl overflow-hidden h-64 sm:h-72 bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80" 
+                                 alt="CareerToday Executive Search Team" 
+                                 onerror="this.src='https://placehold.co/800x600/007DB7/FFFFFF?text=CareerToday+Group'"
+                                 class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
+                            <div class="absolute bottom-4 left-4 right-4 text-white">
+                                <span class="text-[11px] font-bold uppercase tracking-wider bg-brandRed px-2.5 py-0.5 rounded-md">EXECUTIVE SEARCH & HR</span>
+                                <p class="font-heading font-bold text-base mt-1.5" data-i18n="hero_card_cap">Kết nối nhân tài — Kiến tạo giá trị bền vững</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-brandLight p-4 rounded-2xl border border-gray-200/70 flex items-center justify-between gap-3">
+                            <div>
+                                <div class="text-xs font-bold text-slate-800" data-i18n="office_short">Trụ sở chính TP. Hồ Chí Minh</div>
+                                <div class="text-xs text-slate-500 mt-0.5">Tầng 17, Vincom Center, 72 Lê Thánh Tôn</div>
+                            </div>
+                            <a href="tel:+84877699759" class="shrink-0 bg-brandRed text-white text-xs font-bold px-3.5 py-2 rounded-xl hover:bg-brandRedDark transition">
+                                <i class="fa-solid fa-phone mr-1"></i> +84 877 699 759
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 2. GIỚI THIỆU / ABOUT US ==================== -->
+    <section id="about" class="py-16 lg:py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brandRed bg-red-50 px-3.5 py-1 rounded-full" data-i18n="about_badge">
+                    GIỚI THIỆU DOANH NGHIỆP
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3" data-i18n="about_title">
+                    CareerToday Group – Công ty TNHH CareerToday
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 mt-2">CAREERTODAY COMPANY LIMITED • “Be your hand, by your side”</p>
+            </div>
+
+            <!-- Vision & Mission -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 mb-10">
+                <div class="lg:col-span-5 bg-gradient-to-br from-brandBlue to-brandBlueDark text-white p-7 sm:p-8 rounded-3xl shadow-soft flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-white/15 flex items-center justify-center text-xl mb-5">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <span class="text-xs font-bold uppercase tracking-widest text-blue-200">VISION</span>
+                        <h3 class="text-xl sm:text-2xl font-extrabold mt-1 mb-3" data-i18n="vision_label">Tầm Nhìn</h3>
+                        <p class="text-blue-50 text-base sm:text-lg font-medium leading-relaxed" data-i18n="vision_text">
+                            Trở thành công ty số 1 trong lĩnh vực tuyển dụng và tư vấn chuyên nghiệp.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-white/15 text-xs text-blue-100 font-semibold">
+                        Managing Director: Ms. Anna Lê
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-brandGrey/70 border border-gray-200/80 p-7 sm:p-8 rounded-3xl">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-10 h-10 rounded-xl bg-brandRed text-white flex items-center justify-center">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <div>
+                            <span class="text-[11px] font-bold uppercase tracking-widest text-brandRed">MISSION</span>
+                            <h3 class="text-xl font-extrabold text-slate-900" data-i18n="mission_label">Sứ Mệnh</h3>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-xs flex items-start gap-3">
+                            <span class="w-7 h-7 rounded-lg bg-red-50 text-brandRed font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">01</span>
+                            <p class="text-sm font-semibold text-slate-800" data-i18n="m_1">Mang lại nhân tài tốt nhất cho doanh nghiệp</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-xs flex items-start gap-3">
+                            <span class="w-7 h-7 rounded-lg bg-blue-50 text-brandBlue font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">02</span>
+                            <p class="text-sm font-semibold text-slate-800" data-i18n="m_2">Khai phá tiềm năng ứng viên</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-xs flex items-start gap-3">
+                            <span class="w-7 h-7 rounded-lg bg-blue-50 text-brandBlue font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">03</span>
+                            <p class="text-sm font-semibold text-slate-800" data-i18n="m_3">Xây dựng văn hóa chuyên nghiệp</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl border border-gray-100 shadow-xs flex items-start gap-3">
+                            <span class="w-7 h-7 rounded-lg bg-red-50 text-brandRed font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">04</span>
+                            <p class="text-sm font-semibold text-slate-800" data-i18n="m_4">Tạo sự gắn kết và giữ chân nhân sự</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 Core Values -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+                <div class="p-6 rounded-3xl bg-white border border-gray-200 hover:border-brandBlue shadow-card transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-brandBlue bg-blue-50 px-3 py-1 rounded-lg">CORE VALUE 01</span>
+                        <i class="fa-solid fa-heart-circle-check text-brandBlue text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-extrabold text-slate-900 mb-2">Unique Customer Experience</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed" data-i18n="cv_1">
+                        Thấu hiểu nỗi đau và đặt trải nghiệm khách hàng làm trọng tâm.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-3xl bg-white border border-gray-200 hover:border-brandRed shadow-card transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-brandRed bg-red-50 px-3 py-1 rounded-lg">CORE VALUE 02</span>
+                        <i class="fa-solid fa-shield-halved text-brandRed text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-extrabold text-slate-900 mb-2">Honest</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed" data-i18n="cv_2">
+                        Trung thực, tôn trọng lời nói và cam kết.
+                    </p>
+                </div>
+
+                <div class="p-6 rounded-3xl bg-white border border-gray-200 hover:border-brandBlue shadow-card transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-extrabold uppercase tracking-wider text-brandBlue bg-blue-50 px-3 py-1 rounded-lg">CORE VALUE 03</span>
+                        <i class="fa-solid fa-lightbulb text-brandBlue text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-extrabold text-slate-900 mb-2">Learn and Constantly Innovate</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed" data-i18n="cv_3">
+                        Không ngừng học hỏi từ thực tiễn và đổi mới để dẫn đầu.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Organization Chart -->
+            <div class="bg-brandLight rounded-3xl p-6 sm:p-8 border border-gray-200/80">
+                <div class="text-center mb-7">
+                    <span class="text-xs font-extrabold uppercase tracking-wider text-brandBlue">ORGANIZATION CHART</span>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1" data-i18n="org_title">Cơ Cấu Nhân Sự CareerToday Group</h3>
+                </div>
+
+                <div class="max-w-5xl mx-auto flex flex-col items-center">
+                    <div class="flex flex-col items-center">
+                        <div class="px-8 py-2.5 rounded-full bg-slate-900 text-white font-heading font-bold text-sm shadow-sm">
+                            Chairman
+                        </div>
+                        <div class="w-0.5 h-4 bg-slate-300"></div>
+                        <div class="px-10 py-3 rounded-full bg-brandRed text-white font-heading font-extrabold text-sm shadow-sm">
+                            CEO (Ms. Anna Lê)
+                        </div>
+                    </div>
+                    
+                    <div class="w-0.5 h-6 bg-slate-300"></div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 w-full">
+                        <div class="bg-white rounded-2xl border border-gray-200 p-4 shadow-xs flex flex-col">
+                            <div class="bg-brandBlue text-white text-center font-heading font-bold text-xs py-2.5 px-3 rounded-xl mb-3">
+                                Operation Director
+                            </div>
+                            <div class="space-y-2 text-xs font-semibold text-slate-700">
+                                <div class="bg-blue-50/80 text-brandBlue px-3 py-2 rounded-lg text-center">Marketing Leader</div>
+                                <div class="bg-blue-50/80 text-brandBlue px-3 py-2 rounded-lg text-center">Recruitment Leader & Associate</div>
+                                <div class="bg-blue-50/80 text-brandBlue px-3 py-2 rounded-lg text-center">Mass Leader</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl border border-gray-200 p-4 shadow-xs flex flex-col">
+                            <div class="bg-brandBlue text-white text-center font-heading font-bold text-xs py-2.5 px-3 rounded-xl mb-3">
+                                Head of HR Consulting
+                            </div>
+                            <div class="space-y-2 text-xs font-semibold text-slate-700">
+                                <div class="bg-blue-50/80 text-brandBlue px-3 py-2 rounded-lg text-center">Training Leader</div>
+                                <div class="bg-slate-50 text-slate-600 px-3 py-2 rounded-lg text-center">HR System & 3P Consultants</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl border border-gray-200 p-4 shadow-xs flex flex-col">
+                            <div class="bg-brandBlue text-white text-center font-heading font-bold text-xs py-2.5 px-3 rounded-xl mb-3">
+                                BD Director
+                            </div>
+                            <div class="space-y-2 text-xs font-semibold text-slate-700">
+                                <div class="bg-blue-50/80 text-brandBlue px-3 py-2 rounded-lg text-center">BD Manager</div>
+                                <div class="bg-blue-50/80 text-brandBlue px-3 py-2 rounded-lg text-center">BD Leader</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl border border-gray-200 p-4 shadow-xs flex flex-col">
+                            <div class="bg-brandBlue text-white text-center font-heading font-bold text-xs py-2.5 px-3 rounded-xl mb-3">
+                                HR & Finance Director
+                            </div>
+                            <div class="space-y-2 text-xs font-semibold text-slate-700">
+                                <div class="bg-blue-50/80 text-brandBlue px-3 py-2 rounded-lg text-center">Admin & HR Leader</div>
+                                <div class="bg-blue-50/80 text-brandBlue px-3 py-2 rounded-lg text-center">IT Specialist</div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl border border-gray-200 p-4 shadow-xs flex flex-col sm:col-span-2 lg:col-span-1">
+                            <div class="bg-brandBlue text-white text-center font-heading font-bold text-xs py-2.5 px-3 rounded-xl mb-3">
+                                Branch Director
+                            </div>
+                            <div class="space-y-2 text-xs font-semibold text-slate-700">
+                                <div class="bg-slate-50 text-slate-600 px-3 py-2 rounded-lg text-center">Regional Client & Talent Operations</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. DỊCH VỤ ESS & B2B JOB ORDER ==================== -->
+    <section id="services" class="py-16 lg:py-24 bg-brandGrey/60 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brandBlue bg-blue-100/80 px-3.5 py-1 rounded-full" data-i18n="srv_badge">
+                    DỊCH VỤ CHUYÊN BIỆT
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3" data-i18n="srv_title">
+                    Giải Pháp Tuyển Dụng Nhân Sự Cấp Cao (ESS)
+                </h2>
+            </div>
+
+            <!-- Flagship Core Service: ESS -->
+            <div class="mb-14">
+                <div class="bg-white rounded-3xl p-7 sm:p-10 border-2 border-brandBlue shadow-soft relative">
+                    <span class="absolute -top-3.5 left-7 bg-brandRed text-white text-[11px] font-extrabold uppercase tracking-wider px-3.5 py-1 rounded-full shadow-xs">EXECUTIVE SEARCH SERVICE (ESS)</span>
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                        <div class="lg:col-span-5 space-y-4">
+                            <div class="w-14 h-14 rounded-2xl bg-blue-50 text-brandBlue flex items-center justify-center text-2xl">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-snug" data-i18n="pkg_1_t">
+                                Dịch vụ Tuyển dụng nhân sự cấp cao (ESS - Executive Search Service)
+                            </h3>
+                            <p class="text-sm text-slate-600 leading-relaxed" data-i18n="pkg_1_sub">
+                                Giải pháp Headhunting chuyên sâu giúp doanh nghiệp tiếp cận và tuyển dụng nhân sự cấp trung, cấp cao và đội ngũ kế thừa tiềm năng một cách chính xác, bảo mật và hiệu quả.
+                            </p>
+                            <div class="pt-2">
+                                <a href="#job-order-form" onclick="selectServiceOrder('ESS - Tuyển dụng nhân sự cấp cao (Executive Search)')" class="inline-flex items-center justify-center gap-2 bg-brandBlue hover:bg-brandBlueDark text-white font-bold px-6 py-3.5 rounded-xl text-sm shadow-sm transition">
+                                    <span data-i18n="pkg_btn">Đặt hàng dịch vụ ESS</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="p-4 sm:p-5 rounded-2xl bg-brandLight border border-gray-200/80 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-red-50 text-brandRed font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">01</div>
+                                <p class="text-sm text-slate-700 leading-relaxed" data-i18n="pkg_1_a">
+                                    Sở hữu kho dữ liệu (database) <strong>hơn 70.000 ứng viên</strong> đa ngành nghề.
+                                </p>
+                            </div>
+                            <div class="p-4 sm:p-5 rounded-2xl bg-brandLight border border-gray-200/80 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-blue-50 text-brandBlue font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">02</div>
+                                <p class="text-sm text-slate-700 leading-relaxed" data-i18n="pkg_1_b">
+                                    Đội ngũ tư vấn đa chức năng (tìm kiếm, phỏng vấn đánh giá chuyên sâu trước khi gửi CV cho khách hàng).
+                                </p>
+                            </div>
+                            <div class="p-4 sm:p-5 rounded-2xl bg-brandLight border border-gray-200/80 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-blue-50 text-brandBlue font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">03</div>
+                                <p class="text-sm text-slate-700 leading-relaxed" data-i18n="pkg_1_c">
+                                    Quy trình tuyển dụng <strong>11 bước chuẩn hóa theo mô hình RACI</strong> rõ ràng từ lúc tiếp nhận yêu cầu (Job Order) đến khi bảo hành nhân sự (Guarantee Placement).
+                                </p>
+                            </div>
+                            <div class="p-4 sm:p-5 rounded-2xl bg-brandLight border border-gray-200/80 flex items-start gap-3">
+                                <div class="w-8 h-8 rounded-lg bg-red-50 text-brandRed font-extrabold text-xs flex items-center justify-center shrink-0 mt-0.5">04</div>
+                                <p class="text-sm text-slate-700 leading-relaxed" data-i18n="pkg_1_d">
+                                    Hợp tác với các trường đại học quốc tế và tổ chức lớn để cung cấp nguồn thực tập sinh và nhân sự kế thừa tiềm năng.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dedicated B2B Form: Đăng ký tư vấn / Gửi yêu cầu tuyển dụng (Job Order) -->
+            <div id="job-order-form" class="bg-gradient-to-br from-slate-900 via-slate-900 to-brandBlueDark rounded-3xl p-6 sm:p-10 text-white shadow-xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-5 space-y-4">
+                        <span class="inline-block bg-brandRed text-white text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-full">B2B CLIENT PORTAL</span>
+                        <h3 class="text-2xl sm:text-3xl font-extrabold leading-tight" data-i18n="jo_title">
+                            Đăng Ký Tư Vấn / Gửi Yêu Cầu Tuyển Dụng (Job Order)
+                        </h3>
+                        <p class="text-sm text-slate-300 leading-relaxed" data-i18n="jo_desc">
+                            Dành riêng cho Quý doanh nghiệp có nhu cầu tuyển dụng nhân sự cấp cao (ESS) hoặc tìm kiếm nhân sự kế thừa tiềm năng. Chuyên viên tư vấn cấp cao của CareerToday sẽ liên hệ phản hồi ngay.
+                        </p>
+                        <div class="space-y-2 pt-2 text-xs text-slate-300">
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check-circle text-brandRed"></i>
+                                <span>Bảo mật tuyệt đối thông tin tuyển dụng của doanh nghiệp</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check-circle text-brandRed"></i>
+                                <span>Gửi Shortlist ứng viên đã qua phỏng vấn đánh giá chuyên sâu</span>
+                            </div>
+                            <div class="flex items-center gap-2.5">
+                                <i class="fa-solid fa-check-circle text-brandRed"></i>
+                                <span>Chính sách bảo hành nhân sự (Guarantee Placement) minh bạch</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 bg-white text-slate-900 rounded-2xl p-6 sm:p-7 shadow-lg">
+                        <form onsubmit="handleJobOrderSubmit(event)" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1" data-i18n="jo_company">Tên doanh nghiệp *</label>
+                                    <input type="text" id="jo-company" required placeholder="Công ty TNHH / Tập đoàn..." class="w-full px-4 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue focus:bg-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1" data-i18n="jo_person">Người liên hệ & Chức vụ *</label>
+                                    <input type="text" id="jo-person" required placeholder="VD: Trần Minh Anh - HR Manager" class="w-full px-4 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue focus:bg-white">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1">Email doanh nghiệp *</label>
+                                    <input type="email" id="jo-email" required placeholder="hr@company.com" class="w-full px-4 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue focus:bg-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1" data-i18n="jo_phone">Số điện thoại *</label>
+                                    <input type="tel" id="jo-phone" required placeholder="0909 xxx xxx" class="w-full px-4 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue focus:bg-white">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1" data-i18n="jo_service">Dịch vụ tuyển dụng *</label>
+                                    <select id="jo-service" class="w-full px-4 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-brandBlue focus:bg-white">
+                                        <option value="ESS - Tuyển dụng nhân sự cấp cao (Executive Search)">ESS - Tuyển dụng nhân sự cấp cao (Executive Search)</option>
+                                        <option value="ESS - Tuyển dụng cấp quản lý (Middle Management)">ESS - Tuyển dụng cấp quản lý (Middle Management)</option>
+                                        <option value="Nguồn thực tập sinh & Nhân sự kế thừa quốc tế">Nguồn thực tập sinh & Nhân sự kế thừa quốc tế</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-700 mb-1" data-i18n="jo_pos">Vị trí & Số lượng cần tuyển *</label>
+                                    <input type="text" id="jo-pos" required placeholder="VD: 01 Head of Sales, 02 Tech Lead" class="w-full px-4 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue focus:bg-white">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1" data-i18n="jo_notes">Ghi chú yêu cầu (Ngân sách lương, thời gian dự kiến...)</label>
+                                <textarea id="jo-notes" rows="3" placeholder="Mô tả thêm yêu cầu của doanh nghiệp..." class="w-full px-4 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue focus:bg-white"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brandRed hover:bg-brandRedDark text-white font-extrabold py-3.5 rounded-xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span data-i18n="jo_submit">Gửi</span>
+                            </button>
+                        </form>
+
+                        <!-- Mailto Fallback Notice -->
+                        <div id="jo-feedback" class="hidden mt-4 p-3.5 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                            <span><i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Đã tạo yêu cầu Job Order! Nhấn nút bên cạnh để gửi qua Email nếu trình duyệt chặn popup:</span>
+                            <a id="jo-mailto-link" href="mailto:anna.le@careertoday.com.vn" class="shrink-0 bg-brandBlue text-white font-bold px-3 py-1.5 rounded-lg hover:bg-brandBlueDark transition">
+                                Gửi Email ngay
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 4. KHÁCH HÀNG TIÊU BIỂU (DANH SÁCH TÊN ĐỐI TÁC) ==================== -->
+    <section id="clients" class="py-16 lg:py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brandRed bg-red-50 px-3.5 py-1 rounded-full" data-i18n="clients_badge">
+                    KHÁCH HÀNG & ĐỐI TÁC TIÊU BIỂU
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3" data-i18n="clients_title">
+                    Đối Tác & Tập Đoàn Đồng Hành Cùng CareerToday
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 mt-2.5" data-i18n="clients_desc">
+                    Danh sách các tập đoàn đa quốc gia và doanh nghiệp hàng đầu trong các lĩnh vực trọng điểm đã tin tưởng hợp tác tuyển dụng nhân sự cùng CareerToday.
+                </p>
+            </div>
+
+            <!-- Industry Group Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10" id="client-filter-tabs">
+                <button onclick="filterClients('all')" class="client-tab px-3.5 py-2 rounded-full text-xs font-bold bg-brandBlue text-white shadow-xs transition" data-cat="all">Tất cả lĩnh vực</button>
+                <button onclick="filterClients('Manufacturing')" class="client-tab px-3.5 py-2 rounded-full text-xs font-bold bg-brandGrey text-slate-700 hover:text-brandBlue transition" data-cat="Manufacturing">Manufacturing & FMCG</button>
+                <button onclick="filterClients('BANKING')" class="client-tab px-3.5 py-2 rounded-full text-xs font-bold bg-brandGrey text-slate-700 hover:text-brandBlue transition" data-cat="BANKING">Banking & Finance</button>
+                <button onclick="filterClients('AIRLINE/ LOGISTIC')" class="client-tab px-3.5 py-2 rounded-full text-xs font-bold bg-brandGrey text-slate-700 hover:text-brandBlue transition" data-cat="AIRLINE/ LOGISTIC">Airline & Logistics</button>
+                <button onclick="filterClients('RETAIL/F&B')" class="client-tab px-3.5 py-2 rounded-full text-xs font-bold bg-brandGrey text-slate-700 hover:text-brandBlue transition" data-cat="RETAIL/F&B">Retail, F&B & Hospitality</button>
+                <button onclick="filterClients('Retail')" class="client-tab px-3.5 py-2 rounded-full text-xs font-bold bg-brandGrey text-slate-700 hover:text-brandBlue transition" data-cat="Retail">Retail & Technology</button>
+                <button onclick="filterClients('Pharmaceutical')" class="client-tab px-3.5 py-2 rounded-full text-xs font-bold bg-brandGrey text-slate-700 hover:text-brandBlue transition" data-cat="Pharmaceutical">Pharmaceutical</button>
+                <button onclick="filterClients('Energy/Real Estate')" class="client-tab px-3.5 py-2 rounded-full text-xs font-bold bg-brandGrey text-slate-700 hover:text-brandBlue transition" data-cat="Energy/Real Estate">Energy & Real Estate</button>
+            </div>
+
+            <!-- Clean Typographic Directory of Partner Names -->
+            <div id="clients-sector-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Rendered via JS as clean name-only list -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. CỔNG VIỆC LÀM / JOB PORTAL ==================== -->
+    <section id="jobs" class="py-16 lg:py-24 bg-brandLight border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-brandRed bg-red-50 px-3.5 py-1 rounded-full" data-i18n="jobs_badge">
+                        CỔNG VIỆC LÀM HEADHUNT (JOB PORTAL)
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3" data-i18n="jobs_title">
+                        Vị Trí Tuyển Dụng Nổi Bật Tại CareerToday
+                    </h2>
+                    <p class="text-sm text-slate-600 mt-1" data-i18n="jobs_sub">
+                        Nộp hồ sơ (CV) trực tuyến — Hồ sơ ứng viên được gửi trực tiếp đến chuyên viên phụ trách tại <strong>anna.le@careertoday.com.vn</strong>.
+                    </p>
+                </div>
+
+                <!-- Live Post Job Button -->
+                <button onclick="openPostJobModal()" class="inline-flex items-center gap-2 bg-brandBlue hover:bg-brandBlueDark text-white font-bold px-5 py-3 rounded-xl shadow-sm transition text-sm shrink-0">
+                    <i class="fa-solid fa-plus"></i>
+                    <span data-i18n="btn_post_job">Đăng tin tuyển dụng mới</span>
+                </button>
+            </div>
+
+            <!-- Job Filter Bar -->
+            <div class="bg-white p-4 sm:p-5 rounded-2xl shadow-card border border-gray-200/80 mb-8">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3">
+                    <div class="lg:col-span-4 relative">
+                        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+                        <input type="text" id="job-filter-keyword" oninput="filterJobs()" placeholder="Tìm theo chức danh, kỹ năng (Golang, Sales, HR...)" class="w-full pl-10 pr-4 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue focus:bg-white">
+                    </div>
+                    <div class="lg:col-span-3">
+                        <select id="job-filter-industry" onchange="filterJobs()" class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-brandBlue focus:bg-white">
+                            <option value="all">Tất cả ngành nghề</option>
+                            <option value="IT/Tech">IT / Tech</option>
+                            <option value="Finance/Banking">Finance / Banking</option>
+                            <option value="Logistics">Logistics</option>
+                            <option value="FMCG/Manufacturing">FMCG / Manufacturing</option>
+                            <option value="Retail/F&B">Retail / F&B</option>
+                        </select>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <select id="job-filter-level" onchange="filterJobs()" class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-brandBlue focus:bg-white">
+                            <option value="all">Tất cả cấp bậc</option>
+                            <option value="Senior/Manager">Senior / Manager</option>
+                            <option value="Specialist/Engineer">Specialist / Engineer</option>
+                            <option value="Intern/Fresher">Intern / Fresher</option>
+                        </select>
+                    </div>
+                    <div class="lg:col-span-2">
+                        <select id="job-filter-location" onchange="filterJobs()" class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-brandBlue focus:bg-white">
+                            <option value="all">Tất cả địa điểm</option>
+                            <option value="TP.HCM">TP.HCM</option>
+                            <option value="Hà Nội">Hà Nội</option>
+                            <option value="Bình Dương">Bình Dương</option>
+                            <option value="Dubai/UAE">Dubai / UAE</option>
+                            <option value="Remote">Remote</option>
+                        </select>
+                    </div>
+                    <div class="lg:col-span-1">
+                        <button onclick="resetJobFilters()" class="w-full h-full py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition" title="Đặt lại bộ lọc">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Job Cards Grid -->
+            <div id="jobs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. TIN TỨC & SỰ KIỆN / NEWS & EVENTS ==================== -->
+    <section id="news" class="py-16 lg:py-24 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+                <div>
+                    <span class="text-xs font-extrabold uppercase tracking-widest text-brandBlue bg-blue-50 px-3.5 py-1 rounded-full" data-i18n="news_badge">
+                        TIN TỨC & SỰ KIỆN • GÓC CHIA SẺ CHUYÊN MÔN
+                    </span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3" data-i18n="news_title">
+                        Thị Trường Lao Động & Kiến Thức Quản Trị Nhân Sự
+                    </h2>
+                </div>
+
+                <!-- Live New Post Button -->
+                <button onclick="openPostNewsModal()" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-bold px-5 py-3 rounded-xl shadow-sm transition text-sm shrink-0">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                    <span data-i18n="btn_post_news">Đăng bài viết mới</span>
+                </button>
+            </div>
+
+            <!-- Articles Grid -->
+            <div id="news-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 7. LIÊN HỆ & BẢN ĐỒ / CONTACT ==================== -->
+    <section id="contact" class="py-16 lg:py-24 bg-brandLight border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brandRed bg-red-50 px-3.5 py-1 rounded-full" data-i18n="contact_badge">
+                    THÔNG TIN LIÊN HỆ & MẠNG XÃ HỘI
+                </span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3" data-i18n="contact_title">
+                    Kết Nối Với CareerToday Group
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Contact Info & Social Channels -->
+                <div class="lg:col-span-5 bg-white p-6 sm:p-8 rounded-3xl shadow-card border border-gray-200/80 flex flex-col justify-between space-y-6">
+                    <div class="space-y-5">
+                        <div>
+                            <h3 class="text-lg sm:text-xl font-extrabold text-slate-900">CareerToday Group – Công ty TNHH CareerToday</h3>
+                            <p class="text-xs font-bold text-brandRed uppercase tracking-wider mt-0.5">CAREERTODAY COMPANY LIMITED</p>
+                        </div>
+
+                        <div class="space-y-4 text-sm">
+                            <div class="flex items-start gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-red-50 text-brandRed flex items-center justify-center shrink-0 mt-0.5">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-slate-900" data-i18n="lbl_addr">Địa chỉ văn phòng:</div>
+                                    <p class="text-slate-600">Tầng 17, Tòa nhà Vincom Center, 72 Lê Thánh Tôn, P. Sài Gòn, TP.HCM</p>
+                                    <a href="https://www.google.com/maps?q=10.77828,106.701912" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-brandBlue hover:underline mt-1">
+                                        <i class="fa-solid fa-diamond-turn-right"></i> Mở Google Maps (10.77828, 106.701912)
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-blue-50 text-brandBlue flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone-volume"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-slate-900 mr-2">Hotline:</span>
+                                    <a href="tel:+84877699759" class="text-brandBlue font-extrabold hover:underline">+84 877 699 759</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-red-50 text-brandRed flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-slate-900 mr-2">Email:</span>
+                                    <a href="mailto:anna.le@careertoday.com.vn" class="text-slate-700 font-semibold hover:text-brandRed transition">anna.le@careertoday.com.vn</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3">
+                                <div class="w-9 h-9 rounded-xl bg-blue-50 text-brandBlue flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-globe"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-slate-900 mr-2">Website:</span>
+                                    <a href="https://careertoday.com.vn" target="_blank" rel="noopener noreferrer" class="text-brandBlue font-semibold hover:underline">https://careertoday.com.vn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-5 border-t border-gray-100">
+                        <div class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-3" data-i18n="lbl_platforms">Các nền tảng mạng xã hội:</div>
+                        <div class="flex flex-wrap gap-2.5">
+                            <a href="https://www.facebook.com/CareerTodayVn?locale=vi_VN" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#1877F2] text-white text-xs font-bold hover:opacity-90 transition">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <span>Fanpage Facebook</span>
+                            </a>
+                            <a href="https://www.linkedin.com/company/career-today/home/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#0A66C2] text-white text-xs font-bold hover:opacity-90 transition">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.tiktok.com/@careertodayy" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-bold hover:opacity-90 transition">
+                                <i class="fa-brands fa-tiktok"></i>
+                                <span>TikTok</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Iframe -->
+                <div class="lg:col-span-7 rounded-3xl overflow-hidden shadow-card border border-gray-200 min-h-[340px] bg-white">
+                    <iframe 
+                        title="Google Maps CareerToday Vincom Center 72 Le Thanh Ton"
+                        src="https://maps.google.com/maps?q=10.77828,106.701912&hl=vi&z=17&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0; min-height: 360px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-8 pb-8 border-b border-slate-800 items-center">
+                <div class="md:col-span-5">
+                    <!-- Exact CareerToday Horizontal Logo with White Sticker Outline (Dark Footer) -->
+                    <svg class="h-14 sm:h-16 w-auto" viewBox="0 0 430 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- White Sticker Die-Cut Border -->
+                        <g fill="#FFFFFF" stroke="#FFFFFF" stroke-width="16" stroke-linejoin="round" stroke-linecap="round">
+                            <use href="#ct-exact-mark"/>
+                            <use href="#ct-exact-wordmark"/>
+                        </g>
+                        <!-- Foreground Brand Symbol & Wordmark -->
+                        <g fill="#00669E">
+                            <path d="M 34 11 A 67 67 0 0 0 116 123 L 111 116 A 59 59 0 0 1 40 18 Z"/>
+                            <path d="M 119 36 A 49 49 0 1 0 104 106 L 99 100 A 41.5 41.5 0 1 1 112 42 Z"/>
+                            <path d="M 34 11 L 40 18 C 54 34 65 49 77 56 C 91 50 101 39 111 29 L 118 35 C 103 52 93 65 91.5 76 C 88.5 89 72 103 44 107 L 41 100 C 61 97 72 86 71 73 C 70 61 60 47 45 28 C 40 21 36 16 34 11 Z"/>
+                            <path d="M 91.5 81 C 94 92 103 105 116 123 L 107 123 C 97 109 89 98 83 90 C 86.5 87 89.5 84 91.5 81 Z"/>
+                        </g>
+
+                        <circle cx="79.5" cy="43" r="10.2" fill="#E30613"/>
+                        <polygon points="77.8,56.5 81.2,56.5 80.6,59.5 82,69.5 79.5,73 77,69.5 78.4,59.5" fill="#FFFFFF"/>
+
+                        <text x="140" y="64" font-family="Montserrat, sans-serif" font-weight="800" font-size="46" letter-spacing="1.2" fill="#E30613">CAREER</text>
+                        <text x="142" y="101" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="31.5" letter-spacing="15.8" fill="#00669E">TODAY</text>
+                        <line x1="142" y1="110" x2="407" y2="110" stroke="#E30613" stroke-width="1.1"/>
+                        <text x="142" y="125" font-family="'Plus Jakarta Sans', sans-serif" font-weight="500" font-size="16.8" letter-spacing="0.45" fill="#E30613">Be your hand, by your side</text>
+                        <line x1="142" y1="131.5" x2="407" y2="131.5" stroke="#E30613" stroke-width="1.1"/>
+                    </svg>
+                    <p class="text-xs text-slate-400 mt-3 max-w-md">
+                        CareerToday Group – Công ty TNHH CareerToday (CAREERTODAY COMPANY LIMITED). Tư vấn tuyển dụng nhân sự cấp cao (Headhunting / ESS).
+                    </p>
+                </div>
+
+                <div class="md:col-span-4 text-xs space-y-2">
+                    <div class="text-white font-bold uppercase tracking-wider mb-2">Liên kết nhanh</div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <a href="#home" class="hover:text-white transition">Trang chủ</a>
+                        <a href="#about" class="hover:text-white transition">Giới thiệu</a>
+                        <a href="#services" class="hover:text-white transition">Dịch vụ ESS</a>
+                        <a href="#jobs" class="hover:text-white transition">Cổng việc làm</a>
+                        <a href="#news" class="hover:text-white transition">Tin tức & Sự kiện</a>
+                        <a href="#contact" class="hover:text-white transition">Liên hệ</a>
+                    </div>
+                </div>
+
+                <div class="md:col-span-3 text-xs space-y-2">
+                    <div class="text-white font-bold uppercase tracking-wider mb-2">Thông tin liên hệ</div>
+                    <p><i class="fa-solid fa-phone text-brandRed mr-1.5"></i> +84 877 699 759</p>
+                    <p><i class="fa-solid fa-envelope text-brandBlue mr-1.5"></i> anna.le@careertoday.com.vn</p>
+                    <p><i class="fa-solid fa-globe text-brandBlue mr-1.5"></i> careertoday.com.vn</p>
+                </div>
+            </div>
+
+            <div class="pt-6 flex flex-col sm:flex-row justify-between items-center text-xs gap-3">
+                <p>© 2026 CAREERTODAY COMPANY LIMITED. All rights reserved.</p>
+                <div class="flex items-center space-x-4">
+                    <a href="https://www.facebook.com/CareerTodayVn?locale=vi_VN" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">Facebook</a>
+                    <a href="https://www.linkedin.com/company/career-today/home/" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">LinkedIn</a>
+                    <a href="https://www.tiktok.com/@careertodayy" target="_blank" rel="noopener noreferrer" class="hover:text-white transition">TikTok</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING QUICK-ACTION BUTTONS ==================== -->
+    <div class="fixed bottom-5 right-5 z-40 flex flex-col items-end gap-3">
+        <a href="https://www.facebook.com/CareerTodayVn?locale=vi_VN" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 bg-[#1877F2] hover:bg-blue-700 text-white px-4 py-2.5 rounded-full shadow-lg transition transform hover:scale-105 text-xs font-bold">
+            <i class="fa-brands fa-facebook-messenger text-base"></i>
+            <span>Chat nhanh</span>
+        </a>
+        <a href="tel:+84877699759" class="pulse-ring flex items-center gap-2.5 bg-brandRed hover:bg-brandRedDark text-white px-4 py-3 rounded-full shadow-lg transition transform hover:scale-105 text-xs sm:text-sm font-extrabold">
+            <i class="fa-solid fa-phone-volume text-base"></i>
+            <span>+84 877 699 759</span>
+        </a>
+    </div>
+
+    <!-- ==================== MODALS ==================== -->
+
+    <!-- 1. GLOBAL SEARCH MODAL -->
+    <div id="search-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-start justify-center pt-16 px-4">
+        <div class="bg-white w-full max-w-2xl rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+            <div class="p-4 border-b border-gray-100 flex items-center gap-3">
+                <i class="fa-solid fa-magnifying-glass text-brandBlue text-lg"></i>
+                <input type="text" id="global-search-input" oninput="runGlobalSearch(this.value)" placeholder="Tìm kiếm việc làm, dịch vụ ESS, bài viết..." class="w-full text-sm sm:text-base focus:outline-none text-slate-800">
+                <button onclick="closeModal('search-modal')" class="p-2 rounded-xl text-slate-400 hover:text-slate-700 hover:bg-gray-100">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div id="global-search-results" class="p-4 max-h-96 overflow-y-auto space-y-2 text-sm">
+                <p class="text-xs text-slate-400 text-center py-6">Nhập từ khóa để tìm kiếm nhanh trong Việc làm, Dịch vụ và Tin tức...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. JOB DETAIL & APPLY CV MODAL -->
+    <div id="job-detail-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-3xl max-h-[90vh] rounded-3xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col">
+            <div class="p-5 sm:p-6 border-b border-gray-100 flex justify-between items-start gap-4 bg-brandLight">
+                <div>
+                    <div class="flex flex-wrap gap-2 mb-2" id="jd-modal-badges"></div>
+                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900" id="jd-modal-title">Job Title</h3>
+                    <p class="text-xs sm:text-sm font-semibold text-brandBlue mt-1" id="jd-modal-meta">Location • Salary</p>
+                </div>
+                <button onclick="closeModal('job-detail-modal')" class="p-2 rounded-xl bg-white text-slate-500 hover:text-slate-900 shadow-2xs">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <div class="p-5 sm:p-6 overflow-y-auto space-y-6">
+                <div>
+                    <h4 class="text-sm font-extrabold uppercase tracking-wider text-slate-900 mb-2">Mô tả công việc & Yêu cầu</h4>
+                    <div id="jd-modal-desc" class="text-sm text-slate-600 leading-relaxed space-y-2"></div>
+                </div>
+
+                <!-- Candidate Apply CV Form -->
+                <div class="bg-blue-50/60 border border-blue-200 rounded-2xl p-5">
+                    <h4 class="text-base font-extrabold text-slate-900 mb-1 flex items-center gap-2">
+                        <i class="fa-solid fa-file-arrow-up text-brandRed"></i>
+                        <span>Ứng tuyển vị trí này (Gửi CV về Email)</span>
+                    </h4>
+                    <p class="text-xs text-slate-600 mb-4">Hồ sơ của bạn sẽ được gửi trực tiếp đến bộ phận Tuyển dụng CareerToday (<strong>anna.le@careertoday.com.vn</strong>).</p>
+
+                    <form onsubmit="handleApplyCVSubmit(event)" class="space-y-3.5">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Họ và tên ứng viên *</label>
+                                <input type="text" id="cv-name" required placeholder="Nguyễn Văn A" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Số điện thoại *</label>
+                                <input type="tel" id="cv-phone" required placeholder="0909 xxx xxx" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">Email ứng viên *</label>
+                                <input type="email" id="cv-email" required placeholder="candidate@email.com" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-700 mb-1">LinkedIn / Portfolio URL</label>
+                                <input type="url" id="cv-linkedin" placeholder="https://linkedin.com/in/..." class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Đính kèm file CV (PDF / DOCX) *</label>
+                            <input type="file" id="cv-file" accept=".pdf,.doc,.docx" required class="w-full px-3.5 py-2 rounded-xl bg-white border border-gray-200 text-xs text-slate-700 file:mr-3 file:py-1.5 file:px-3 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-brandBlue file:text-white hover:file:bg-brandBlueDark">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-slate-700 mb-1">Giới thiệu ngắn gọn (Cover Note)</label>
+                            <textarea id="cv-note" rows="2" placeholder="Tóm tắt số năm kinh nghiệm, mức lương mong muốn..." class="w-full px-3.5 py-2 rounded-xl bg-white border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-brandBlue"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brandRed hover:bg-brandRedDark text-white font-extrabold py-3 rounded-xl shadow-sm transition flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>Nộp CV & Mở Email gửi anna.le@careertoday.com.vn</span>
+                        </button>
+                    </form>
+
+                    <div id="cv-feedback" class="hidden mt-3 p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900">
+                        <p class="font-bold"><i class="fa-solid fa-circle-check text-emerald-600 mr-1"></i> Đã tạo bản nháp Email ứng tuyển!</p>
+                        <p class="mt-1">Vui lòng đính kèm file CV bạn vừa chọn vào cửa sổ Email vừa mở và nhấn Gửi tới <strong>anna.le@careertoday.com.vn</strong>, hoặc <a id="cv-mailto-fallback" href="mailto:anna.le@careertoday.com.vn" class="underline font-bold text-brandBlue">nhấn vào đây để mở lại Email</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. POST NEW JOB MODAL -->
+    <div id="post-job-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+            <div class="p-5 border-b border-gray-100 flex justify-between items-center bg-brandLight">
+                <h3 class="text-lg font-extrabold text-slate-900">Đăng Tin Tuyển Dụng Mới (Job Portal)</h3>
+                <button onclick="closeModal('post-job-modal')" class="p-2 rounded-xl text-slate-500 hover:bg-gray-200"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form onsubmit="handleAddNewJob(event)" class="p-5 sm:p-6 space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Chức danh tuyển dụng *</label>
+                    <input type="text" id="new-job-title" required placeholder="VD: Finance Director / Trưởng phòng Kinh doanh" class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm">
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Ngành nghề *</label>
+                        <select id="new-job-industry" class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm">
+                            <option value="IT/Tech">IT/Tech</option>
+                            <option value="Finance/Banking">Finance/Banking</option>
+                            <option value="Logistics">Logistics</option>
+                            <option value="FMCG/Manufacturing">FMCG/Manufacturing</option>
+                            <option value="Retail/F&B">Retail/F&B</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Cấp bậc *</label>
+                        <select id="new-job-level" class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm">
+                            <option value="Senior/Manager">Senior/Manager</option>
+                            <option value="Specialist/Engineer">Specialist/Engineer</option>
+                            <option value="Intern/Fresher">Intern/Fresher</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Địa điểm làm việc *</label>
+                        <select id="new-job-location" class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm">
+                            <option value="TP.HCM">TP.HCM</option>
+                            <option value="Hà Nội">Hà Nội</option>
+                            <option value="Bình Dương">Bình Dương</option>
+                            <option value="Dubai/UAE">Dubai/UAE</option>
+                            <option value="Remote">Remote</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 mb-1">Mức lương hấp dẫn *</label>
+                        <input type="text" id="new-job-salary" required placeholder="VD: $2,500 - $3,500" class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Mô tả công việc & Yêu cầu chính *</label>
+                    <textarea id="new-job-desc" rows="3" required placeholder="Nhập mô tả vị trí và yêu cầu kinh nghiệm..." class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brandBlue hover:bg-brandBlueDark text-white font-bold py-3 rounded-xl text-sm transition">
+                    Đăng tin lên Cổng việc làm ngay
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 4. READ ARTICLE MODAL -->
+    <div id="news-detail-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-2xl max-h-[88vh] rounded-3xl shadow-2xl border border-gray-200 overflow-hidden flex flex-col">
+            <div class="relative h-56 bg-slate-100 shrink-0">
+                <img id="news-modal-img" src="" alt="" class="w-full h-full object-cover">
+                <button onclick="closeModal('news-detail-modal')" class="absolute top-4 right-4 p-2.5 rounded-full bg-white/90 text-slate-800 hover:bg-white shadow-md">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="p-6 overflow-y-auto space-y-4">
+                <div class="flex items-center gap-3 text-xs font-bold">
+                    <span id="news-modal-cat" class="px-2.5 py-1 rounded-md bg-blue-50 text-brandBlue">Category</span>
+                    <span id="news-modal-date" class="text-slate-400">Date</span>
+                </div>
+                <h3 id="news-modal-title" class="text-xl sm:text-2xl font-extrabold text-slate-900 leading-snug">Title</h3>
+                <div id="news-modal-body" class="text-sm text-slate-600 leading-relaxed space-y-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. POST NEW ARTICLE MODAL -->
+    <div id="post-news-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-xl rounded-3xl shadow-2xl border border-gray-200 overflow-hidden">
+            <div class="p-5 border-b border-gray-100 flex justify-between items-center bg-brandLight">
+                <h3 class="text-lg font-extrabold text-slate-900">Đăng Bài Viết / Sự Kiện Mới</h3>
+                <button onclick="closeModal('post-news-modal')" class="p-2 rounded-xl text-slate-500 hover:bg-gray-200"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <form onsubmit="handleAddNewArticle(event)" class="p-5 sm:p-6 space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Tiêu đề bài viết *</label>
+                    <input type="text" id="new-art-title" required placeholder="VD: Báo cáo lương & xu hướng nhân sự cấp cao 2026" class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Chuyên mục *</label>
+                    <select id="new-art-cat" class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm">
+                        <option value="Thị trường lao động">Thị trường lao động</option>
+                        <option value="Quản trị nhân sự">Quản trị nhân sự</option>
+                        <option value="Bí quyết phỏng vấn">Bí quyết phỏng vấn</option>
+                        <option value="Sự kiện CareerToday">Sự kiện CareerToday</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Nội dung bài viết *</label>
+                    <textarea id="new-art-body" rows="5" required placeholder="Nhập nội dung chia sẻ chuyên môn hoặc thông tin sự kiện..." class="w-full px-3.5 py-2.5 rounded-xl bg-brandGrey/80 border border-gray-200 text-sm"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-brandRed hover:bg-brandRedDark text-white font-bold py-3 rounded-xl text-sm transition">
+                    Xuất bản bài viết ngay
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST CONTAINER -->
+    <div id="toast-box" class="fixed top-24 right-5 z-50 space-y-2 pointer-events-none"></div>
+
+    <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+    <script>
+        // 1. PARTNER / CLIENT DIRECTORY DATA (NAME-ONLY, NO LOGOS)
+        const clientSectors = [
+            {
+                sector: "Manufacturing",
+                label: "Manufacturing & FMCG",
+                badgeColor: "bg-blue-50 text-brandBlue",
+                accentBorder: "border-l-brandBlue",
+                brands: [
+                    "Unilever",
+                    "TTC AgriS",
+                    "Thiên Long",
+                    "Bibica",
+                    "Tân Tân",
+                    "Mỹ phẩm Sài Gòn (SCC)",
+                    "McCormick",
+                    "Coca-Cola"
+                ]
+            },
+            {
+                sector: "BANKING",
+                label: "Banking & Finance",
+                badgeColor: "bg-red-50 text-brandRed",
+                accentBorder: "border-l-brandRed",
+                brands: [
+                    "VNPAY",
+                    "VPBank",
+                    "HDBank",
+                    "FE Credit",
+                    "EY",
+                    "KPMG"
+                ]
+            },
+            {
+                sector: "AIRLINE/ LOGISTIC",
+                label: "Airline & Logistics",
+                badgeColor: "bg-blue-50 text-brandBlue",
+                accentBorder: "border-l-brandBlue",
+                brands: [
+                    "DHL",
+                    "SF Express",
+                    "Apex Logistics",
+                    "Vietjet Air",
+                    "Vietjet Air Cargo"
+                ]
+            },
+            {
+                sector: "RETAIL/F&B",
+                label: "Retail, F&B & Hospitality",
+                badgeColor: "bg-red-50 text-brandRed",
+                accentBorder: "border-l-brandRed",
+                brands: [
+                    "Jollibee",
+                    "Garmin",
+                    "Sendo",
+                    "Tuyết Hà Optic",
+                    "Golf Valley Hotel",
+                    "Groupe Casino",
+                    "Redcats",
+                    "Fly"
+                ]
+            },
+            {
+                sector: "Retail",
+                label: "Retail & Technology",
+                badgeColor: "bg-blue-50 text-brandBlue",
+                accentBorder: "border-l-brandBlue",
+                brands: [
+                    "Lisod",
+                    "Bstar Solutions",
+                    "Rakuten"
+                ]
+            },
+            {
+                sector: "Pharmaceutical",
+                label: "Pharmaceutical & Healthcare",
+                badgeColor: "bg-red-50 text-brandRed",
+                accentBorder: "border-l-brandRed",
+                brands: [
+                    "Sanofi",
+                    "Bayer",
+                    "Syngenta",
+                    "Novartis",
+                    "Orgamol"
+                ]
+            },
+            {
+                sector: "Energy/Real Estate",
+                label: "Energy, Chemicals & Real Estate",
+                badgeColor: "bg-blue-50 text-brandBlue",
+                accentBorder: "border-l-brandBlue",
+                brands: [
+                    "Phúc Nguyên Chemicals",
+                    "Novaland",
+                    "Vinci Energies",
+                    "TotalEnergies",
+                    "Areva"
+                ]
+            }
+        ];
+
+        // 2. PRE-POPULATED CAREERTODAY HEADHUNT JOBS
+        let jobsData = [
+            {
+                id: 1,
+                title: "Senior Golang Backend Developer (Dubai / UAE)",
+                industry: "IT/Tech",
+                level: "Senior/Manager",
+                location: "Dubai/UAE",
+                salary: "$4,000 - $5,500 + Relocation",
+                hot: true,
+                posted: "Hôm nay",
+                desc: "Thiết kế và phát triển hệ thống microservices hiệu năng cao bằng Golang cho tập đoàn Fintech quốc tế tại Dubai. Hỗ trợ trọn gói Visa, vé máy bay và nhà ở ban đầu. Yêu cầu từ 4 năm kinh nghiệm Golang, Kubernetes, PostgreSQL và giao tiếp tiếng Anh tốt."
+            },
+            {
+                id: 2,
+                title: "Head of Sales - FMCG",
+                industry: "FMCG/Manufacturing",
+                level: "Senior/Manager",
+                location: "TP.HCM",
+                salary: "3,500 - 5,000 USD + Bonus",
+                hot: true,
+                posted: "1 ngày trước",
+                desc: "Hoạch định chiến lược kinh doanh toàn quốc kênh GT & MT cho tập đoàn hàng tiêu dùng nhanh hàng đầu. Quản lý đội ngũ hơn 120 nhân sự kinh doanh và phát triển mạng lưới nhà phân phối trọng điểm."
+            },
+            {
+                id: 3,
+                title: "Logistics Operations Manager",
+                industry: "Logistics",
+                level: "Senior/Manager",
+                location: "Bình Dương",
+                salary: "2,200 - 3,000 USD",
+                hot: false,
+                posted: "2 ngày trước",
+                desc: "Điều hành trung tâm kho vận 3PL quy mô lớn tại Bình Dương, tối ưu hóa quy trình chuỗi cung ứng, quản lý KPI giao nhận và đảm bảo tuân thủ tiêu chuẩn an toàn quốc tế."
+            },
+            {
+                id: 4,
+                title: "HRBP Manager (Human Resources Business Partner)",
+                industry: "Finance/Banking",
+                level: "Senior/Manager",
+                location: "TP.HCM",
+                salary: "2,000 - 2,800 USD",
+                hot: true,
+                posted: "2 ngày trước",
+                desc: "Đồng hành cùng Ban Giám đốc khối Công nghệ & Ngân hàng số trong việc hoạch định nguồn nhân lực, phát triển nhân tài, khung năng lực và gắn kết đội ngũ."
+            },
+            {
+                id: 5,
+                title: "Senior Java / ReactJS Fullstack Engineer",
+                industry: "IT/Tech",
+                level: "Specialist/Engineer",
+                location: "TP.HCM",
+                salary: "1,800 - 2,600 USD",
+                hot: false,
+                posted: "3 ngày trước",
+                desc: "Phát triển nền tảng thanh toán số và ví điện tử phục vụ hàng triệu người dùng. Yêu cầu thành thạo Java Spring Boot, ReactJS/TypeScript và tư duy tối ưu hiệu năng hệ thống."
+            },
+            {
+                id: 6,
+                title: "Recruitment & Marketing Intern (Vincom Center Q.1)",
+                industry: "Retail/F&B",
+                level: "Intern/Fresher",
+                location: "TP.HCM",
+                salary: "Trợ cấp + Thưởng dự án",
+                hot: false,
+                posted: "4 ngày trước",
+                desc: "Cơ hội thực tập trực tiếp tại trụ sở CareerToday (Tầng 17, Vincom Center, 72 Lê Thánh Tôn). Được đào tạo bài bản quy trình Headhunting 11 bước RACI và xây dựng thương hiệu tuyển dụng."
+            }
+        ];
+
+        // 3. PRE-POPULATED NEWS & HR INSIGHTS
+        let newsData = [
+            {
+                id: 101,
+                category: "Thị trường lao động",
+                date: "20/11/2026",
+                title: "Xu hướng tuyển dụng nhân sự cấp cao (Executive Search) năm 2026 tại Việt Nam",
+                img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
+                summary: "Nhu cầu tìm kiếm lãnh đạo am hiểu chuyển đổi số, quản trị chuỗi cung ứng và phát triển bền vững đang tăng trưởng mạnh ở khối FDI và tập đoàn nội địa.",
+                content: "Thị trường nhân sự cấp trung và cấp cao năm 2026 chứng kiến sự dịch chuyển rõ nét: doanh nghiệp không chỉ tìm kiếm ứng viên giỏi chuyên môn thuần túy mà ưu tiên các nhà lãnh đạo có tư duy dữ liệu (Data-driven), khả năng tái cấu trúc linh hoạt và dẫn dắt đội ngũ đa thế hệ.\n\nVới kho dữ liệu hơn 70.000 ứng viên cùng đội ngũ tư vấn đa chức năng, CareerToday giúp doanh nghiệp rút ngắn 40% thời gian tuyển dụng các vị trí chiến lược như C-Level, Head of Sales, Tech Lead và Logistics Manager."
+            },
+            {
+                id: 102,
+                category: "Quản trị nhân sự",
+                date: "14/11/2026",
+                title: "Quy trình tuyển dụng 11 bước chuẩn RACI giúp tối ưu tỷ lệ giữ chân nhân tài",
+                img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80",
+                summary: "Phân định rõ trách nhiệm R-A-C-I từ bước tiếp nhận Job Order đến bảo hành nhân sự giúp giảm thiểu rủi ro tuyển sai người và nâng cao trải nghiệm ứng viên.",
+                content: "Một trong những nguyên nhân khiến nhân sự cấp cao rời bỏ tổ chức trong 6 tháng đầu là sự thiếu đồng nhất kỳ vọng ngay từ khâu phỏng vấn.\n\nTại CareerToday, quy trình tuyển dụng 11 bước theo ma trận RACI chuẩn hóa chặt chẽ từng điểm chạm: từ bước phân tích Job Order, phỏng vấn đánh giá chuyên sâu bởi chuyên gia CareerToday, gửi báo cáo Shortlist minh bạch cho đến giai đoạn đồng hành bảo hành nhân sự (Guarantee Placement)."
+            },
+            {
+                id: 103,
+                category: "Bí quyết phỏng vấn",
+                date: "05/11/2026",
+                title: "Bí quyết chinh phục vòng phỏng vấn vị trí Quản lý cấp trung & cấp cao",
+                img: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80",
+                summary: "Cách trình bày thành tựu bằng số liệu định lượng, tư duy giải quyết vấn đề và sự tương thích văn hóa doanh nghiệp trước hội đồng tuyển dụng.",
+                content: "Khi ứng tuyển các vị trí quản lý, nhà tuyển dụng quan tâm nhất đến tác động thực tế (Business Impact) mà bạn đã tạo ra ở tổ chức trước đó.\n\nHãy chuẩn bị 3 câu chuyện thành công gắn với chỉ số KPI cụ thể (tăng trưởng doanh thu, tối ưu chi phí vận hành hoặc xây dựng đội ngũ kế thừa), đồng thời đặt những câu hỏi sắc sảo về định hướng chiến lược của doanh nghiệp trong 12-24 tháng tới."
+            }
+        ];
+
+        // 4. BILINGUAL DICTIONARY (VI / EN)
+        let currentLang = 'vi';
+        let activeJobForApply = null;
+
+        const i18nDict = {
+            vi: {
+                top_address: "Tầng 17, Tòa nhà Vincom Center, 72 Lê Thánh Tôn, P. Sài Gòn, TP.HCM",
+                nav_home: "Trang chủ",
+                nav_about: "Giới thiệu",
+                nav_services: "Dịch vụ",
+                nav_jobs: "Việc làm",
+                nav_news: "Tin tức & Sự kiện",
+                nav_contact: "Liên hệ",
+                nav_cta: "Gửi yêu cầu tuyển dụng",
+                company_full: "Công ty TNHH CareerToday",
+                slogan_sub: "(Luôn đồng hành bên bạn)",
+                hero_sub: "Tư vấn tuyển dụng nhân sự cấp cao (Headhunting / ESS) chuyên nghiệp với kho dữ liệu hơn 70.000 ứng viên đa ngành nghề.",
+                hero_cta_jobs: "Tìm việc làm ngay",
+                hero_cta_order: "Gửi yêu cầu tuyển dụng",
+                stat_1: "Hồ sơ ứng viên",
+                stat_2: "Executive Search Service",
+                stat_3: "Đối tác của 30+ Tập đoàn hàng đầu",
+                hero_card_cap: "Kết nối nhân tài — Kiến tạo giá trị bền vững",
+                office_short: "Trụ sở chính TP. Hồ Chí Minh",
+                about_badge: "GIỚI THIỆU DOANH NGHIỆP",
+                about_title: "CareerToday Group – Công ty TNHH CareerToday",
+                vision_label: "Tầm Nhìn",
+                vision_text: "Trở thành công ty số 1 trong lĩnh vực tuyển dụng và tư vấn chuyên nghiệp.",
+                mission_label: "Sứ Mệnh",
+                m_1: "Mang lại nhân tài tốt nhất cho doanh nghiệp",
+                m_2: "Khai phá tiềm năng ứng viên",
+                m_3: "Xây dựng văn hóa chuyên nghiệp",
+                m_4: "Tạo sự gắn kết và giữ chân nhân sự",
+                cv_1: "Thấu hiểu nỗi đau và đặt trải nghiệm khách hàng làm trọng tâm.",
+                cv_2: "Trung thực, tôn trọng lời nói và cam kết.",
+                cv_3: "Không ngừng học hỏi từ thực tiễn và đổi mới để dẫn đầu.",
+                org_title: "Cơ Cấu Nhân Sự CareerToday Group",
+                srv_badge: "DỊCH VỤ CHUYÊN BIỆT",
+                srv_title: "Giải Pháp Tuyển Dụng Nhân Sự Cấp Cao (ESS)",
+                pkg_1_t: "Dịch vụ Tuyển dụng nhân sự cấp cao (ESS - Executive Search Service)",
+                pkg_1_sub: "Giải pháp Headhunting chuyên sâu giúp doanh nghiệp tiếp cận và tuyển dụng nhân sự cấp trung, cấp cao và đội ngũ kế thừa tiềm năng một cách chính xác, bảo mật và hiệu quả.",
+                pkg_1_a: "Sở hữu kho dữ liệu (database) hơn 70.000 ứng viên đa ngành nghề.",
+                pkg_1_b: "Đội ngũ tư vấn đa chức năng (tìm kiếm, phỏng vấn đánh giá chuyên sâu trước khi gửi CV cho khách hàng).",
+                pkg_1_c: "Quy trình tuyển dụng 11 bước chuẩn hóa theo mô hình RACI rõ ràng từ lúc tiếp nhận yêu cầu (Job Order) đến khi bảo hành nhân sự (Guarantee Placement).",
+                pkg_1_d: "Hợp tác với các trường đại học quốc tế và tổ chức lớn để cung cấp nguồn thực tập sinh và nhân sự kế thừa tiềm năng.",
+                pkg_btn: "Đặt hàng dịch vụ ESS",
+                jo_title: "Đăng Ký Tư Vấn / Gửi Yêu Cầu Tuyển Dụng (Job Order)",
+                jo_desc: "Dành riêng cho Quý doanh nghiệp có nhu cầu tuyển dụng nhân sự cấp cao (ESS) hoặc tìm kiếm nhân sự kế thừa tiềm năng. Chuyên viên tư vấn cấp cao của CareerToday sẽ liên hệ phản hồi ngay.",
+                jo_company: "Tên doanh nghiệp *",
+                jo_person: "Người liên hệ & Chức vụ *",
+                jo_phone: "Số điện thoại *",
+                jo_service: "Dịch vụ tuyển dụng *",
+                jo_pos: "Vị trí & Số lượng cần tuyển *",
+                jo_notes: "Ghi chú yêu cầu (Ngân sách lương, thời gian dự kiến...)",
+                jo_submit: "Gửi",
+                clients_badge: "KHÁCH HÀNG & ĐỐI TÁC TIÊU BIỂU",
+                clients_title: "Đối Tác & Tập Đoàn Đồng Hành Cùng CareerToday",
+                clients_desc: "Danh sách các tập đoàn đa quốc gia và doanh nghiệp hàng đầu trong các lĩnh vực trọng điểm đã tin tưởng hợp tác tuyển dụng nhân sự cùng CareerToday.",
+                jobs_badge: "CỔNG VIỆC LÀM HEADHUNT (JOB PORTAL)",
+                jobs_title: "Vị Trí Tuyển Dụng Nổi Bật Tại CareerToday",
+                jobs_sub: "Nộp hồ sơ (CV) trực tuyến — Hồ sơ ứng viên được gửi trực tiếp đến chuyên viên phụ trách tại anna.le@careertoday.com.vn.",
+                btn_post_job: "Đăng tin tuyển dụng mới",
+                news_badge: "TIN TỨC & SỰ KIỆN • GÓC CHIA SẺ CHUYÊN MÔN",
+                news_title: "Thị Trường Lao Động & Kiến Thức Quản Trị Nhân Sự",
+                btn_post_news: "Đăng bài viết mới",
+                contact_badge: "THÔNG TIN LIÊN HỆ & MẠNG XÃ HỘI",
+                contact_title: "Kết Nối Với CareerToday Group",
+                lbl_addr: "Địa chỉ văn phòng:",
+                lbl_platforms: "Các nền tảng mạng xã hội:"
+            },
+            en: {
+                top_address: "17th Floor, Vincom Center Building, 72 Le Thanh Ton St., Saigon Ward, HCMC",
+                nav_home: "Home",
+                nav_about: "About Us",
+                nav_services: "Services",
+                nav_jobs: "Jobs",
+                nav_news: "News & Events",
+                nav_contact: "Contact",
+                nav_cta: "Submit Job Order",
+                company_full: "CAREERTODAY COMPANY LIMITED",
+                slogan_sub: "(Always accompanying you)",
+                hero_sub: "Professional Executive Search Service (Headhunting / ESS) backed by over 70,000 multi-industry candidate profiles.",
+                hero_cta_jobs: "Explore Jobs",
+                hero_cta_order: "Submit Job Order",
+                stat_1: "Candidate Profiles",
+                stat_2: "Executive Search Service",
+                stat_3: "Partner of 30+ Leading Corporations",
+                hero_card_cap: "Connecting Top Talent — Building Sustainable Value",
+                office_short: "Ho Chi Minh City Headquarters",
+                about_badge: "ABOUT US",
+                about_title: "CareerToday Group – CAREERTODAY COMPANY LIMITED",
+                vision_label: "Vision",
+                vision_text: "Becoming the No.1 company in hiring and professional consulting.",
+                mission_label: "Mission",
+                m_1: "Bring the best talent to businesses",
+                m_2: "Unlock candidates' true potential",
+                m_3: "Build a professional corporate culture",
+                m_4: "Create engagement and talent retention",
+                cv_1: "Deeply understand pain points and place customer experience at the center.",
+                cv_2: "Be transparent, honest, and honor every word and commitment.",
+                cv_3: "Continuously learn from real practice and innovate to lead.",
+                org_title: "CareerToday Group Organization Chart",
+                srv_badge: "SPECIALIZED SERVICE",
+                srv_title: "Executive Search Service (ESS) Solutions",
+                pkg_1_t: "Executive Search Service (ESS)",
+                pkg_1_sub: "Specialized headhunting solutions helping enterprises recruit middle-to-senior executives and high-potential succession talent with precision and confidentiality.",
+                pkg_1_a: "Proprietary database of over 70,000 multi-industry candidates.",
+                pkg_1_b: "Multi-functional consultants conducting in-depth interviews and evaluations before submitting CVs to clients.",
+                pkg_1_c: "Standardized 11-step RACI recruitment process from Job Order intake to Guarantee Placement.",
+                pkg_1_d: "Partnerships with international universities and leading organizations to supply interns and high-potential succession talent.",
+                pkg_btn: "Order ESS Service",
+                jo_title: "Register Consultation / Submit Job Order",
+                jo_desc: "Exclusively for corporate clients seeking Executive Search Service (ESS) or high-potential succession talent. Our senior consultants will respond promptly.",
+                jo_company: "Company Name *",
+                jo_person: "Contact Person & Title *",
+                jo_phone: "Phone Number *",
+                jo_service: "Recruitment Service *",
+                jo_pos: "Position & Headcount *",
+                jo_notes: "Additional Notes (Salary budget, expected timeline...)",
+                jo_submit: "Submit",
+                clients_badge: "FEATURED CLIENTS & PARTNERS",
+                clients_title: "Corporations & Enterprises Partnering With CareerToday",
+                clients_desc: "Directory of leading multinational corporations and enterprises across key industries partnering with CareerToday.",
+                jobs_badge: "HEADHUNT JOB PORTAL",
+                jobs_title: "Featured Open Positions at CareerToday",
+                jobs_sub: "Apply online — Your CV is routed directly to our recruitment team at anna.le@careertoday.com.vn.",
+                btn_post_job: "Post a New Job",
+                news_badge: "NEWS & EVENTS • HR INSIGHTS",
+                news_title: "Labor Market Trends & HR Management Insights",
+                btn_post_news: "Publish New Post",
+                contact_badge: "CONTACT & SOCIAL CHANNELS",
+                contact_title: "Connect With CareerToday Group",
+                lbl_addr: "Office Address:",
+                lbl_platforms: "Official Social Channels:"
+            }
+        };
+
+        // INITIALIZE ON LOAD
+        document.addEventListener('DOMContentLoaded', () => {
+            renderClientSectors(clientSectors);
+            renderJobs(jobsData);
+            renderNews(newsData);
+        });
+
+        // RENDER PARTNER / CLIENT DIRECTORY (NAME-ONLY LIST, NO LOGOS)
+        function renderClientSectors(list) {
+            const container = document.getElementById('clients-sector-container');
+            container.innerHTML = list.map(group => `
+                <div class="bg-brandLight rounded-3xl p-6 border border-gray-200/80 shadow-xs flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between pb-3.5 mb-4 border-b border-gray-200/80">
+                            <span class="text-xs font-extrabold uppercase tracking-wider px-3 py-1 rounded-lg ${group.badgeColor}">
+                                ${group.label}
+                            </span>
+                            <span class="text-xs font-bold text-slate-400">${group.brands.length} ${currentLang === 'vi' ? 'đối tác' : 'partners'}</span>
+                        </div>
+                        <ul class="flex flex-wrap gap-2">
+                            ${group.brands.map(name => `
+                                <li class="bg-white text-slate-800 font-semibold text-xs sm:text-sm px-3.5 py-2 rounded-xl border border-gray-200/90 border-l-4 ${group.accentBorder} hover:text-brandBlue hover:border-brandBlue transition shadow-2xs">
+                                    ${name}
+                                </li>
+                            `).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterClients(sector) {
+            document.querySelectorAll('.client-tab').forEach(btn => {
+                if (btn.dataset.cat === sector) {
+                    btn.className = 'client-tab px-3.5 py-2 rounded-full text-xs font-bold bg-brandBlue text-white shadow-xs transition';
+                } else {
+                    btn.className = 'client-tab px-3.5 py-2 rounded-full text-xs font-bold bg-brandGrey text-slate-700 hover:text-brandBlue transition';
+                }
+            });
+
+            if (sector === 'all') {
+                renderClientSectors(clientSectors);
+            } else {
+                renderClientSectors(clientSectors.filter(g => g.sector === sector));
+            }
+        }
+
+        // RENDER JOBS & FILTERS
+        function renderJobs(list) {
+            document.getElementById('nav-job-count').textContent = jobsData.length;
+            const grid = document.getElementById('jobs-grid');
+            if (list.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-12 bg-white rounded-3xl border border-gray-200 text-slate-500 text-sm">Không tìm thấy vị trí tuyển dụng phù hợp với bộ lọc hiện tại.</div>`;
+                return;
+            }
+
+            grid.innerHTML = list.map(job => `
+                <div class="bg-white rounded-3xl p-6 border border-gray-200/90 hover:border-brandBlue shadow-card hover:shadow-soft transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-[11px] font-extrabold px-2.5 py-1 rounded-lg bg-blue-50 text-brandBlue">${job.industry}</span>
+                            ${job.hot ? '<span class="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-brandRed text-white">HOT</span>' : `<span class="text-[11px] text-slate-400">${job.posted}</span>`}
+                        </div>
+                        <h3 class="text-base sm:text-lg font-extrabold text-slate-900 leading-snug mb-2 hover:text-brandBlue cursor-pointer" onclick="openJobDetail(${job.id})">
+                            ${job.title}
+                        </h3>
+                        <div class="flex flex-wrap gap-2 text-xs text-slate-500 font-semibold mb-3">
+                            <span><i class="fa-solid fa-layer-group text-brandBlue mr-1"></i>${job.level}</span>
+                            <span>•</span>
+                            <span><i class="fa-solid fa-location-dot text-brandRed mr-1"></i>${job.location}</span>
+                        </div>
+                        <div class="inline-block bg-emerald-50 text-emerald-700 text-xs font-extrabold px-3 py-1 rounded-lg mb-3">
+                            <i class="fa-solid fa-sack-dollar mr-1"></i> ${job.salary}
+                        </div>
+                        <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed mb-4">
+                            ${job.desc}
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100 flex items-center gap-2">
+                        <button onclick="openJobDetail(${job.id})" class="w-full bg-brandRed hover:bg-brandRedDark text-white font-bold py-2.5 px-4 rounded-xl text-xs transition flex items-center justify-center gap-1.5">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            <span>${currentLang === 'vi' ? 'Xem JD & Apply CV' : 'View JD & Apply CV'}</span>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterJobs() {
+            const kw = document.getElementById('job-filter-keyword').value.toLowerCase().trim();
+            const ind = document.getElementById('job-filter-industry').value;
+            const lvl = document.getElementById('job-filter-level').value;
+            const loc = document.getElementById('job-filter-location').value;
+
+            const filtered = jobsData.filter(j => {
+                const matchKw = !kw || j.title.toLowerCase().includes(kw) || j.desc.toLowerCase().includes(kw) || j.industry.toLowerCase().includes(kw);
+                const matchInd = ind === 'all' || j.industry === ind;
+                const matchLvl = lvl === 'all' || j.level === lvl;
+                const matchLoc = loc === 'all' || j.location === loc;
+                return matchKw && matchInd && matchLvl && matchLoc;
+            });
+
+            renderJobs(filtered);
+        }
+
+        function resetJobFilters() {
+            document.getElementById('job-filter-keyword').value = '';
+            document.getElementById('job-filter-industry').value = 'all';
+            document.getElementById('job-filter-level').value = 'all';
+            document.getElementById('job-filter-location').value = 'all';
+            renderJobs(jobsData);
+        }
+
+        // JOB DETAIL & APPLY CV MODAL
+        function openJobDetail(id) {
+            const job = jobsData.find(j => j.id === id);
+            if (!job) return;
+            activeJobForApply = job;
+
+            document.getElementById('jd-modal-badges').innerHTML = `
+                <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-blue-100 text-brandBlue">${job.industry}</span>
+                <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-slate-200 text-slate-700">${job.level}</span>
+                <span class="text-xs font-bold px-2.5 py-1 rounded-lg bg-red-100 text-brandRed">${job.location}</span>
+            `;
+            document.getElementById('jd-modal-title').textContent = job.title;
+            document.getElementById('jd-modal-meta').textContent = `Mức lương: ${job.salary} • Đăng: ${job.posted}`;
+            document.getElementById('jd-modal-desc').innerHTML = `<p>${job.desc}</p><p class="text-xs text-slate-500 mt-2">• Quy trình phỏng vấn đánh giá chuyên sâu bởi chuyên viên CareerToday trước khi gặp trực tiếp doanh nghiệp.</p>`;
+            document.getElementById('cv-feedback').classList.add('hidden');
+            document.getElementById('job-detail-modal').classList.remove('hidden');
+        }
+
+        function handleApplyCVSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('cv-name').value;
+            const phone = document.getElementById('cv-phone').value;
+            const email = document.getElementById('cv-email').value;
+            const linkedin = document.getElementById('cv-linkedin').value || 'Không cung cấp';
+            const fileInput = document.getElementById('cv-file');
+            const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : 'CV_Dinh_Kem.pdf';
+            const note = document.getElementById('cv-note').value || 'Không có ghi chú thêm';
+            const jobTitle = activeJobForApply ? activeJobForApply.title : 'Vị trí tuyển dụng tại CareerToday';
+
+            const subject = encodeURIComponent(`[Ứng tuyển CV] ${jobTitle} - ${name}`);
+            const body = encodeURIComponent(
+                `Kính gửi Ms. Anna Lê & Bộ phận Tuyển dụng CareerToday,\n\n` +
+                `Tôi xin gửi hồ sơ ứng tuyển cho vị trí: ${jobTitle}\n\n` +
+                `THÔNG TIN ỨNG VIÊN:\n` +
+                `- Họ và tên: ${name}\n` +
+                `- Số điện thoại: ${phone}\n` +
+                `- Email: ${email}\n` +
+                `- LinkedIn / Portfolio: ${linkedin}\n` +
+                `- File CV đính kèm: ${fileName}\n` +
+                `- Giới thiệu ngắn gọn: ${note}\n\n` +
+                `Trân trọng cảm ơn!`
+            );
+
+            const mailtoHref = `mailto:anna.le@careertoday.com.vn?subject=${subject}&body=${body}`;
+            document.getElementById('cv-mailto-fallback').href = mailtoHref;
+            document.getElementById('cv-feedback').classList.remove('hidden');
+            window.location.href = mailtoHref;
+            showToast('Đã khởi tạo Email gửi CV tới anna.le@careertoday.com.vn!');
+        }
+
+        // POST NEW JOB
+        function openPostJobModal() {
+            document.getElementById('post-job-modal').classList.remove('hidden');
+        }
+
+        function handleAddNewJob(e) {
+            e.preventDefault();
+            const newJob = {
+                id: Date.now(),
+                title: document.getElementById('new-job-title').value,
+                industry: document.getElementById('new-job-industry').value,
+                level: document.getElementById('new-job-level').value,
+                location: document.getElementById('new-job-location').value,
+                salary: document.getElementById('new-job-salary').value,
+                hot: true,
+                posted: "Vừa đăng",
+                desc: document.getElementById('new-job-desc').value
+            };
+            jobsData.unshift(newJob);
+            renderJobs(jobsData);
+            e.target.reset();
+            closeModal('post-job-modal');
+            showToast('Đã đăng tin tuyển dụng mới lên Cổng việc làm!');
+        }
+
+        // RENDER NEWS & EVENTS
+        function renderNews(list) {
+            const grid = document.getElementById('news-grid');
+            grid.innerHTML = list.map(art => `
+                <article class="bg-white rounded-3xl overflow-hidden border border-gray-200/90 hover:border-brandBlue shadow-card hover:shadow-soft transition flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 bg-slate-100 overflow-hidden cursor-pointer" onclick="openNewsDetail(${art.id})">
+                            <img src="${art.img}" alt="${art.title}" onerror="this.src='https://placehold.co/800x500/007DB7/FFFFFF?text=CareerToday+Insights'" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                            <span class="absolute top-3 left-3 bg-brandBlue text-white text-[11px] font-bold px-3 py-1 rounded-full shadow-xs">${art.category}</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="text-xs text-slate-400 font-semibold mb-2"><i class="fa-regular fa-calendar mr-1"></i> ${art.date}</div>
+                            <h3 class="text-base sm:text-lg font-extrabold text-slate-900 leading-snug mb-2.5 hover:text-brandBlue cursor-pointer" onclick="openNewsDetail(${art.id})">
+                                ${art.title}
+                            </h3>
+                            <p class="text-xs sm:text-sm text-slate-600 line-clamp-3 leading-relaxed">
+                                ${art.summary}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6">
+                        <button onclick="openNewsDetail(${art.id})" class="text-xs font-extrabold text-brandRed hover:text-brandRedDark inline-flex items-center gap-1.5 transition">
+                            <span>${currentLang === 'vi' ? 'Đọc chi tiết bài viết' : 'Read full article'}</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function openNewsDetail(id) {
+            const art = newsData.find(a => a.id === id);
+            if (!art) return;
+            document.getElementById('news-modal-img').src = art.img;
+            document.getElementById('news-modal-cat').textContent = art.category;
+            document.getElementById('news-modal-date').textContent = art.date;
+            document.getElementById('news-modal-title').textContent = art.title;
+            document.getElementById('news-modal-body').innerHTML = art.content.split('\n\n').map(p => `<p>${p}</p>`).join('');
+            document.getElementById('news-detail-modal').classList.remove('hidden');
+        }
+
+        function openPostNewsModal() {
+            document.getElementById('post-news-modal').classList.remove('hidden');
+        }
+
+        function handleAddNewArticle(e) {
+            e.preventDefault();
+            const bodyText = document.getElementById('new-art-body').value;
+            const newArt = {
+                id: Date.now(),
+                category: document.getElementById('new-art-cat').value,
+                date: new Date().toLocaleDateString('vi-VN'),
+                title: document.getElementById('new-art-title').value,
+                img: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
+                summary: bodyText.substring(0, 140) + "...",
+                content: bodyText
+            };
+            newsData.unshift(newArt);
+            renderNews(newsData);
+            e.target.reset();
+            closeModal('post-news-modal');
+            showToast('Đã xuất bản bài viết mới thành công!');
+        }
+
+        // B2B JOB ORDER FORM HANDLER
+        function selectServiceOrder(serviceName) {
+            const select = document.getElementById('jo-service');
+            if (select) select.value = serviceName;
+        }
+
+        function handleJobOrderSubmit(e) {
+            e.preventDefault();
+            const company = document.getElementById('jo-company').value;
+            const person = document.getElementById('jo-person').value;
+            const email = document.getElementById('jo-email').value;
+            const phone = document.getElementById('jo-phone').value;
+            const service = document.getElementById('jo-service').value;
+            const pos = document.getElementById('jo-pos').value;
+            const notes = document.getElementById('jo-notes').value || 'Không có ghi chú';
+
+            const subject = encodeURIComponent(`[Job Order - B2B] ${company} - ${pos}`);
+            const body = encodeURIComponent(
+                `Kính gửi CareerToday Group (Ms. Anna Lê),\n\n` +
+                `YÊU CẦU TƯ VẤN / ĐẶT HÀNG TUYỂN DỤNG (JOB ORDER):\n` +
+                `- Doanh nghiệp: ${company}\n` +
+                `- Người liên hệ: ${person}\n` +
+                `- Email: ${email}\n` +
+                `- Số điện thoại: ${phone}\n` +
+                `- Gói dịch vụ: ${service}\n` +
+                `- Vị trí & Số lượng: ${pos}\n` +
+                `- Ghi chú thêm: ${notes}\n\n` +
+                `Trân trọng!`
+            );
+
+            const mailtoUrl = `mailto:anna.le@careertoday.com.vn?subject=${subject}&body=${body}`;
+            document.getElementById('jo-mailto-link').href = mailtoUrl;
+            document.getElementById('jo-feedback').classList.remove('hidden');
+            showToast('Đã ghi nhận Job Order! Đang kết nối tới anna.le@careertoday.com.vn...');
+            window.location.href = mailtoUrl;
+        }
+
+        // GLOBAL SEARCH MODAL
+        function openSearchModal() {
+            document.getElementById('search-modal').classList.remove('hidden');
+            setTimeout(() => document.getElementById('global-search-input').focus(), 100);
+        }
+
+        function runGlobalSearch(query) {
+            const box = document.getElementById('global-search-results');
+            const q = query.toLowerCase().trim();
+            if (!q) {
+                box.innerHTML = `<p class="text-xs text-slate-400 text-center py-6">Nhập từ khóa để tìm kiếm nhanh trong Việc làm, Dịch vụ và Tin tức...</p>`;
+                return;
+            }
+
+            const matchedJobs = jobsData.filter(j => j.title.toLowerCase().includes(q) || j.location.toLowerCase().includes(q) || j.industry.toLowerCase().includes(q));
+            const matchedNews = newsData.filter(n => n.title.toLowerCase().includes(q) || n.summary.toLowerCase().includes(q));
+
+            let html = '';
+            matchedJobs.forEach(j => {
+                html += `
+                    <div onclick="closeModal('search-modal'); openJobDetail(${j.id})" class="p-3 rounded-xl hover:bg-blue-50 border border-gray-100 cursor-pointer flex items-center justify-between gap-3">
+                        <div>
+                            <span class="text-[10px] font-extrabold uppercase text-brandRed bg-red-50 px-2 py-0.5 rounded">VIỆC LÀM</span>
+                            <div class="font-bold text-slate-900 mt-1">${j.title}</div>
+                            <div class="text-xs text-slate-500">${j.location} • ${j.salary}</div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-slate-400"></i>
+                    </div>`;
+            });
+            matchedNews.forEach(n => {
+                html += `
+                    <div onclick="closeModal('search-modal'); openNewsDetail(${n.id})" class="p-3 rounded-xl hover:bg-blue-50 border border-gray-100 cursor-pointer flex items-center justify-between gap-3">
+                        <div>
+                            <span class="text-[10px] font-extrabold uppercase text-brandBlue bg-blue-50 px-2 py-0.5 rounded">TIN TỨC</span>
+                            <div class="font-bold text-slate-900 mt-1">${n.title}</div>
+                        </div>
+                        <i class="fa-solid fa-chevron-right text-slate-400"></i>
+                    </div>`;
+            });
+
+            if (!html) {
+                html = `<p class="text-xs text-slate-500 text-center py-6">Không tìm thấy kết quả phù hợp cho "<strong>${query}</strong>".</p>`;
+            }
+            box.innerHTML = html;
+        }
+
+        // BILINGUAL SWITCHER VI | EN
+        function switchLang(lang) {
+            currentLang = lang;
+            const viBtn = document.getElementById('btn-vi');
+            const enBtn = document.getElementById('btn-en');
+            if (lang === 'vi') {
+                viBtn.className = 'px-2.5 py-1 rounded-full text-xs font-extrabold bg-brandBlue text-white shadow-xs transition';
+                enBtn.className = 'px-2.5 py-1 rounded-full text-xs font-extrabold text-slate-600 hover:text-brandBlue transition';
+            } else {
+                enBtn.className = 'px-2.5 py-1 rounded-full text-xs font-extrabold bg-brandBlue text-white shadow-xs transition';
+                viBtn.className = 'px-2.5 py-1 rounded-full text-xs font-extrabold text-slate-600 hover:text-brandBlue transition';
+            }
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18nDict[lang][key]) {
+                    el.textContent = i18nDict[lang][key];
+                }
+            });
+
+            renderClientSectors(clientSectors);
+            renderJobs(jobsData);
+            renderNews(newsData);
+            showToast(lang === 'vi' ? 'Đã chuyển sang Tiếng Việt' : 'Switched to English');
+        }
+
+        // HELPERS
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+
+        function showToast(msg) {
+            const box = document.getElementById('toast-box');
+            const el = document.createElement('div');
+            el.className = 'bg-slate-900 text-white border-l-4 border-brandRed px-4 py-3 rounded-xl shadow-xl text-xs sm:text-sm font-semibold flex items-center gap-2.5 pointer-events-auto transition-all';
+            el.innerHTML = `<i class="fa-solid fa-circle-check text-brandRed"></i><span>${msg}</span>`;
+            box.appendChild(el);
+            setTimeout(() => {
+                el.style.opacity = '0';
+                setTimeout(() => el.remove(), 300);
+            }, 3200);
+        }
+    </script>
+</body>
+</html>
